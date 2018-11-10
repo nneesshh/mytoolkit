@@ -1,0 +1,3555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src_vc141">
+      <UniqueIdentifier>{a71e91d6-142b-48fe-8bb4-7a648f9943bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\utils">
+      <UniqueIdentifier>{026e16d1-9a09-4ba9-ae00-a8f1bf328bdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\utils\xml">
+      <UniqueIdentifier>{750415a3-e0d9-47ea-ae8f-18d2a860d431}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\log">
+      <UniqueIdentifier>{849ec9fa-ed02-428c-addc-1c96e01a8afc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\platform">
+      <UniqueIdentifier>{7e8005ac-5de4-4ee0-93c3-3f0ae24aae19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\platform\sys">
+      <UniqueIdentifier>{5ab0fe72-4c21-4ffe-aa29-a4c2af28ceb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\core">
+      <UniqueIdentifier>{eeb9e722-0e67-4988-bb8e-822d3f21bf85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\core\timingwheel">
+      <UniqueIdentifier>{08d28a56-2c96-40dc-a014-4257c5b867e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\core\timingwheel\timeout">
+      <UniqueIdentifier>{869eee61-2ad5-479c-9007-f1da0a540fa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\core\kj">
+      <UniqueIdentifier>{ff46cbc2-86a6-41ea-abbf-d3baca709f74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\core\snprintf">
+      <UniqueIdentifier>{e57d6c55-92c5-4258-9c80-62d9203f8405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\json">
+      <UniqueIdentifier>{bbfee71a-0960-460b-abde-14740f5c4303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\cc_container">
+      <UniqueIdentifier>{1d46d071-eda8-4688-b105-944f9a20875e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\cipher">
+      <UniqueIdentifier>{af50da27-30d5-41d1-9ec2-e43bb8d55868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\cipher\tinyaes">
+      <UniqueIdentifier>{1efd9702-5a42-4e03-ade1-7116f8c4cdad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\framework">
+      <UniqueIdentifier>{a1261665-bec4-4967-9c5d-9e89a89323bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\framework\xml2json">
+      <UniqueIdentifier>{7c4285bf-efd1-4de6-b554-46735d90b54f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\framework\xml2json\include">
+      <UniqueIdentifier>{38179742-eb80-458d-9950-2c4c483b499c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\framework\pbjson">
+      <UniqueIdentifier>{1505a19d-c2a1-4608-8b79-593c6e06a91c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\cityhash">
+      <UniqueIdentifier>{85f76d06-5d8b-4b91-9e1c-63809a5c7fcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\c_container">
+      <UniqueIdentifier>{25139c01-bbc2-497f-8efa-4525eac99aa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\queue">
+      <UniqueIdentifier>{deee46a3-a0de-4ae1-99bc-0c5fef20d8c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\queue\readerwriter">
+      <UniqueIdentifier>{408cec6c-bf62-4b11-a0b4-7bc41bb43ede}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\queue\concurrent">
+      <UniqueIdentifier>{21f9e1f4-9a4a-464e-b2b5-607cb4f4b082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base">
+      <UniqueIdentifier>{1c42dc11-8020-44aa-b79d-8e366b2bbc55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\containers">
+      <UniqueIdentifier>{fdc82519-ddad-40c0-ae34-a748d4a7915e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\files">
+      <UniqueIdentifier>{d11e4419-e2f2-42f3-9cc7-203df0b75e2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\json">
+      <UniqueIdentifier>{3af6516f-320a-4ca9-ab01-55fe54027b9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\memory">
+      <UniqueIdentifier>{369e7c1b-dc1a-46ce-ac1c-089647cf6d7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\message_loop">
+      <UniqueIdentifier>{b3b874ff-29cb-4c72-a0b2-19e8532db92d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\process">
+      <UniqueIdentifier>{5b24fee3-bda6-4391-a247-d4297412d789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\strings">
+      <UniqueIdentifier>{fd814a74-f6a6-4bed-b696-c078fa13fd38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\synchronization">
+      <UniqueIdentifier>{2802e41a-b15c-465c-bddd-2e43c2c6221e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party">
+      <UniqueIdentifier>{4fba38cb-617f-4bf3-b4b7-efc211bc5522}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\icu">
+      <UniqueIdentifier>{e5943909-6ac3-4d59-beac-85de5b69f2c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\ced">
+      <UniqueIdentifier>{054bbf41-30a0-443f-b712-c35fc98eb4ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\ced\src">
+      <UniqueIdentifier>{ec198f0b-9718-4afc-bc9d-d7a64a75f58b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\ced\src\compact_enc_det">
+      <UniqueIdentifier>{269ffae1-450e-40cd-9979-16a0be393788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\ced\src\util">
+      <UniqueIdentifier>{3bbf948d-a250-4326-8331-b19f4b47ab1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\nspr">
+      <UniqueIdentifier>{05a7a52f-cd36-4b9d-a7d3-4b746a306ffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\modp_b64">
+      <UniqueIdentifier>{3bdedb5c-4d78-4dff-8bf4-4a78c0793c13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\dmg_fp">
+      <UniqueIdentifier>{73f932e3-3eb1-4b7a-af85-0c01b21f4fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\superfasthash">
+      <UniqueIdentifier>{86dd2906-fbf9-49db-94d5-a74e29275e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\third_party\dynamic_annotations">
+      <UniqueIdentifier>{5a5515a7-f9a6-4a94-bc50-5914582c3f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\threading">
+      <UniqueIdentifier>{6a5074f4-b176-4ca5-b73b-0c92e89de7fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\time">
+      <UniqueIdentifier>{0468cd19-f888-46a1-bc87-d29b4fb7b503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\timer">
+      <UniqueIdentifier>{30182f60-5dc6-461f-9613-9a1d04e04542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\win">
+      <UniqueIdentifier>{cf97e35d-4bda-42cb-abd0-bab70ea298a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\build">
+      <UniqueIdentifier>{3dff3468-aa7e-4807-a570-2e1ef4664018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\debug">
+      <UniqueIdentifier>{40ed71d3-59ec-4ca2-bd47-dd027376e5b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\task">
+      <UniqueIdentifier>{1fde27fb-62a2-4f31-8d7f-55cd3de1111a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\task\sequence_manager">
+      <UniqueIdentifier>{55e55889-10aa-4bdd-8664-eb606dc0af5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\task\task_scheduler">
+      <UniqueIdentifier>{57a725e7-acf9-4957-8193-3e1cfa5239f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\allocator">
+      <UniqueIdentifier>{8479462d-0df0-47bd-906b-dac68f03bc5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\allocator\partition_allocator">
+      <UniqueIdentifier>{464762d7-716f-4e69-9a5e-182605c84829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\posix">
+      <UniqueIdentifier>{5a3ebdb4-a00a-46e3-9aa1-79f6b69325b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\base\power_monitor">
+      <UniqueIdentifier>{03538b5e-5392-4b03-81fa-0430b7ca51a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\crash_reporter">
+      <UniqueIdentifier>{d97d5cb2-51d6-469f-a548-bbfee64698f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\crash_reporter\win">
+      <UniqueIdentifier>{67b171ee-bb5f-41ae-8db8-9b0b4d563bac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\lua">
+      <UniqueIdentifier>{bb236df3-09cc-421e-90bd-e00044b70509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\lua\oolua_src">
+      <UniqueIdentifier>{3be8a6db-8c15-41d5-9a27-0619a17c3c81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\lua\luaprofiler_src">
+      <UniqueIdentifier>{a50c1ddb-6fe3-4a2c-8c4a-bb3577494dd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty">
+      <UniqueIdentifier>{4ee983e4-93f5-433b-80a5-c3369e4d939b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g">
+      <UniqueIdentifier>{5d9520d7-12bd-4a13-84ca-c00c565718da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\protobuf">
+      <UniqueIdentifier>{4c54a0b6-59c2-4c6f-a298-69916fd5f020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\protobuf\Header Files">
+      <UniqueIdentifier>{bf6f3a79-f157-4034-9fe1-e8cafd177d83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\protobuf\Source Files">
+      <UniqueIdentifier>{49945455-fb5e-4315-b1fe-26eefcccec16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\capnp">
+      <UniqueIdentifier>{366eba58-6945-44ce-853f-51b8b453187f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\capnp\kj">
+      <UniqueIdentifier>{ddd613d0-a093-4e47-9a7c-02a6e6f2e5ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\breakpad">
+      <UniqueIdentifier>{0dc3e026-85a2-47c0-88dc-e9c4599ecdb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\breakpad\client">
+      <UniqueIdentifier>{8b9b8e42-a03f-478c-a412-a3cff310050e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\breakpad\client\windows">
+      <UniqueIdentifier>{cba29845-a157-4176-b9ed-558c65f836fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\breakpad\client\windows\common">
+      <UniqueIdentifier>{aac86c9f-7e3e-42f5-94b8-f70acc1b22c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\breakpad\client\windows\exception_handler">
+      <UniqueIdentifier>{425b9fe0-d5b2-42b0-81f5-29e7aed3ffe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\breakpad\client\windows\crash_report_sender">
+      <UniqueIdentifier>{a2aefed3-1b1c-4e6f-9502-2d054e63ca66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_client">
+      <UniqueIdentifier>{08b043bf-a0bc-4e1f-baba-88a3d886c1e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_server">
+      <UniqueIdentifier>{47e44cfe-4ffb-4513-a72d-e2396aef2e48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\stlsoft">
+      <UniqueIdentifier>{2626c1c9-f196-460b-a55b-10334fd8831e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\stlsoft\pantheios">
+      <UniqueIdentifier>{5f3bb357-6b97-4efa-b3a3-67506bb5a084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\stlsoft\pantheios\src">
+      <UniqueIdentifier>{c7ad228f-6d40-49e3-88e3-a6b43fa6f8b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\stlsoft\pantheios\src\core">
+      <UniqueIdentifier>{123646dc-2d80-434f-92f9-1a3a5defa659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\stlsoft\pantheios\src\inserters">
+      <UniqueIdentifier>{273181ed-1036-4cd5-b1bd-e65151330438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\stlsoft\pantheios\src\util">
+      <UniqueIdentifier>{8a280faa-6dd5-409a-8ffa-79688b4f9e9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\stlsoft\pantheios\src\backends">
+      <UniqueIdentifier>{8c1e2564-8483-4fe5-a1cd-430fc210ec33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_vc141\thirdparty\stlsoft\pantheios\src\frontends">
+      <UniqueIdentifier>{7e48b4b1-4a22-4214-8a62-00c2899899ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src_vc141\utils\BadWordFilter.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\KVDict.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\StringHash.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\URLCode.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\WordTable.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\platform\asciiops.h">
+      <Filter>src_vc141\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\platform\assemblerops.h">
+      <Filter>src_vc141\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\platform\types.h">
+      <Filter>src_vc141\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\platform\utilities.h">
+      <Filter>src_vc141\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\platform\sys\queue.h">
+      <Filter>src_vc141\platform\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\bit_flag.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\BitFlag.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\BufferFile.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\Heartbeat.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\LRandom.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\MyMacros.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\TickedEvent.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\xml\pugiconfig.hpp">
+      <Filter>src_vc141\utils\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\xml\pugixml.hpp">
+      <Filter>src_vc141\utils\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\json\cJSON.h">
+      <Filter>src_vc141\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cipher\MD5Wrapper.h">
+      <Filter>src_vc141\cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cipher\TEA.h">
+      <Filter>src_vc141\cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cipher\tinyaes\aes128.h">
+      <Filter>src_vc141\cipher\tinyaes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\FileAnsi.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\NameCreator.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cityhash\citycrc.h">
+      <Filter>src_vc141\cityhash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cityhash\city.h">
+      <Filter>src_vc141\cityhash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\c_container\utstring.h">
+      <Filter>src_vc141\c_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\c_container\cparray.h">
+      <Filter>src_vc141\c_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\c_container\utarray.h">
+      <Filter>src_vc141\c_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\c_container\uthash.h">
+      <Filter>src_vc141\c_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\c_container\utlist.h">
+      <Filter>src_vc141\c_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\UsingMyToolkit.h">
+      <Filter>src_vc141</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\timingwheel\timeout\timeout.h">
+      <Filter>src_vc141\core\timingwheel\timeout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\timingwheel\timeout\timeout-debug.h">
+      <Filter>src_vc141\core\timingwheel\timeout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\TimeoutEventHub.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\TimeTicker.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\ITimeSlicer.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\TimeSlicer.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\IRandomAccessFile.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\MyUtil.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\SimpleCalendar.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\SimpleTimer.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\TimeTickerAbs.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\TimeSlicerBase.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\readerwriter\readerwriterqueue.h">
+      <Filter>src_vc141\queue\readerwriter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\readerwriter\atomicops.h">
+      <Filter>src_vc141\queue\readerwriter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\concurrent\concurrentqueue.h">
+      <Filter>src_vc141\queue\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\concurrent\blockingconcurrentqueue.h">
+      <Filter>src_vc141\queue\concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\ICapnprotoRpcHandler.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\IConfig.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\IGameApp.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\IHandler.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\ConfigHub.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\Cooldown.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\DealingGuard.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\HandlerHub.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\FifoTaskQueue.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\IRedisHandler.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\IAppBase.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\IAppPlugin.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\IHeartbeat.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\simple_buf_alloc.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\bip_buf.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\CharCode.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\MirrorBuffer.h">
+      <Filter>src_vc141\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\BlockingQueue.h">
+      <Filter>src_vc141\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\circle_queue.h">
+      <Filter>src_vc141\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\MessageQueue.h">
+      <Filter>src_vc141\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\kj\KjSimpleEventLoop.h">
+      <Filter>src_vc141\core\kj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cc_container\SortedVector.hpp">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\at_exit.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\atomic_ref_count.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\atomicops.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\atomicops_internals_atomicword_compat.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\atomicops_internals_x86_msvc.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\base_export.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\base_switches.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\bind.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\bind_helpers.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\bind_internal.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\callback.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\callback_forward.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\callback_helpers.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\callback_internal.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\cancelable_callback.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\command_line.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\compiler_specific.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\cpu.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\hash.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\lazy_instance.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\location.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\logging.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\path_service.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\pickle.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\rand_util.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\run_loop.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\scoped_clear_errno.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\sequence_checker.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\sequence_checker_impl.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\sequenced_task_runner.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\stl_util.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\sys_info.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task_runner.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\template_util.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\tuple.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\vlog.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\containers\hash_tables.h">
+      <Filter>src_vc141\base\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\containers\linked_list.h">
+      <Filter>src_vc141\base\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\containers\mru_cache.h">
+      <Filter>src_vc141\base\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\containers\small_map.h">
+      <Filter>src_vc141\base\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\containers\stack_container.h">
+      <Filter>src_vc141\base\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\raw_scoped_refptr_mismatch_checker.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\ref_counted.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\ref_counted_memory.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\scoped_policy.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\singleton.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\weak_ptr.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\message_loop.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump_default.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump_win.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\timer_slack.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\process\kill.h">
+      <Filter>src_vc141\base\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\process\launch.h">
+      <Filter>src_vc141\base\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\process\memory.h">
+      <Filter>src_vc141\base\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\process\process.h">
+      <Filter>src_vc141\base\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\process\process_handle.h">
+      <Filter>src_vc141\base\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\process\process_iterator.h">
+      <Filter>src_vc141\base\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\icu\icu_utf.h">
+      <Filter>src_vc141\base\third_party\icu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\post_task_and_reply_impl.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\simple_thread.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_checker.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_checker_impl.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_id_name_manager.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_local.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_local_storage.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\time\time.h">
+      <Filter>src_vc141\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\timer\timer.h">
+      <Filter>src_vc141\base\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\object_watcher.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\pe_image.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\registry.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_handle.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_process_information.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\startup_information.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\windows_version.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\wrapped_window_proc.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\base64.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\Base64Wrapper.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\crash_reporter\crash_reporter.h">
+      <Filter>src_vc141\crash_reporter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\build\buildflag.h">
+      <Filter>src_vc141\base\build</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\build\build_config.h">
+      <Filter>src_vc141\base\build</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\message_window.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_task_runner_handle.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\UsingBase.h">
+      <Filter>src_vc141</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\message_loop_task_runner.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\shared_memory.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\shared_memory_handle.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\sequence_local_storage_map.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\sequenced_task_runner_handle.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\sha1.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\values.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\value_iterators.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\file_version_info_win.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\file_version_info.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\debugger.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\alias.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\stack_trace.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\profiler.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\sequence_token.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\pending_task.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\dump_without_crashing.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\md5.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\sequenced_worker_pool.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\platform_thread.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\resource_util.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\com_init_check_hook.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\patch_util.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\com_init_util.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\time\tick_clock.h">
+      <Filter>src_vc141\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\time\default_clock.h">
+      <Filter>src_vc141\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\time\default_tick_clock.h">
+      <Filter>src_vc141\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\time\clock.h">
+      <Filter>src_vc141\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\guid.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\snprintf\mysnprintf.h">
+      <Filter>src_vc141\core\snprintf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\log\StdLogLevelDef.h">
+      <Filter>src_vc141\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\log\StdLog.h">
+      <Filter>src_vc141\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\base_paths.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\clear_at_exit.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\log\StdPanLog.h">
+      <Filter>src_vc141\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\log\StdChromiumLog.h">
+      <Filter>src_vc141\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\crash_reporter\win\crash_service.h">
+      <Filter>src_vc141\crash_reporter\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\crash_reporter\crash_reporter_in_process_win.h">
+      <Filter>src_vc141\crash_reporter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\MyLuaTool.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\lbind.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\MyLua.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\UsingLua.h">
+      <Filter>src_vc141</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\crash_reporter\crash_reporter_win.h">
+      <Filter>src_vc141\crash_reporter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\crash_reporter\win\crash_service_main.h">
+      <Filter>src_vc141\crash_reporter\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\lfs.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\CpuMetrics.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\char_arrays.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\class_from_stack.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\default_trait_caller.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\dsl_va_args.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\lua_includes.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\lvd_types.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\lvd_type_traits.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_boilerplate.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_check_result.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_chunk.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_config.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_dsl.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_dsl_export.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_error.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_exception.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_function.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_helpers.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_open.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_pull.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_push.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_ref.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_registration.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_registration_fwd.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_script.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_stack.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_stack_dump.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_stack_fwd.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_string.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_table.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_traits.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_traits_fwd.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_version.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\platform_check.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_base_checker.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_caller.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_class.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_constructor.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_constructor_param_tester.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_function_dispatch.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_function_exports.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_member_function.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_none_member_function.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_operators.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_public_member.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_stack_helper.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_storage.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_tags.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_tag_info.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_test.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_userdata.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\push_pointer_internal.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\stack_get.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\typelist_structs.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\type_converters.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\oolua_src\type_list.h">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\MyLuaGlue.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\luna5.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\utils\CpuProfiler.h">
+      <Filter>src_vc141\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\core_profiler.h">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\function_meter.h">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\luaprofiler.h">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\stack.h">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\clocks.h">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\snprintf\fast_memcpy.h">
+      <Filter>src_vc141\core\snprintf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\EventDispatcher.h">
+      <Filter>src_vc141\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cc_container\ObjectPool.hpp">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cc_container\malloc_allocator.h">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cc_container\new_delete_allocator.h">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cc_container\FSBAllocator.h">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cc_container\FSBPool.h">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cc_container\FSBPoolAllocator.h">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\core\kj\KjSimpleIoContext.h">
+      <Filter>src_vc141\core\kj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\cipher\crc16.h">
+      <Filter>src_vc141\cipher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\MyLuaTimer.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\CamelBlockingConcurrentQueue.h">
+      <Filter>src_vc141\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\queue\CamelConcurrentQueue.h">
+      <Filter>src_vc141\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\UsingProtobuf.h">
+      <Filter>src_vc141</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\ProtobufImporter.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\framework\ProtobufArenaHelper.h">
+      <Filter>src_vc141\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\any.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\any.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\api.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\compiler\importer.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\compiler\parser.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor_database.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\duration.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\dynamic_message.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\empty.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\field_mask.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_reflection.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\gzip_stream.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\printer.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\strtod.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\tokenizer.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\zero_copy_stream_impl.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\map_field.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\message.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\reflection_ops.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\service.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\source_context.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\struct.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\mathlimits.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\substitute.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\text_format.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\timestamp.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\type.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\unknown_field_set.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\delimited_message_util.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\field_comparator.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\field_mask_util.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\datapiece.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\default_value_objectwriter.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\error_listener.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\field_mask_utility.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_escaping.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_objectwriter.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_stream_parser.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\object_writer.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\proto_writer.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\protostream_objectsource.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\protostream_objectwriter.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\type_info.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\type_info_test_helper.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\utility.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\json_util.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\message_differencer.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\time_util.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\type_resolver_util.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wire_format.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wrappers.pb.h">
+      <Filter>src_vc141\thirdparty\g\protobuf\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\guid_string.h">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\http_upload.h">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\handler\exception_handler.h">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\exception_handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\sender\crash_report_sender.h">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_report_sender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\crash_generation_client.h">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\client_info.h">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\crash_generation_server.h">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\minidump_generator.h">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\UsingCapnp.h">
+      <Filter>src_vc141</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\time\time_override.h">
+      <Filter>src_vc141\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\big_endian.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\bits.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\bit_cast.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\callback_list.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\scoped_refptr.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\ptr_util.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\linked_ptr.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\free_deleter.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\discardable_memory.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\aligned_memory.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\discardable_shared_memory.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\discardable_memory_allocator.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\version.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\value_conversions.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\unguessable_token.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\thread_annotations.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task_runner_util.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\platform_thread_win.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\async_operation.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\atl.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\core_winrt_util.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\current_module.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\enum_variant.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\i18n.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\iunknown_impl.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\iat_patch_function.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\process_startup_helper.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\propvarutil.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\reference.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_gdi_object.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_bstr.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_co_mem.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_com_initializer.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_handle_verifier.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_hstring.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_hglobal.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_hdc.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_propvariant.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\shlwapi.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_select_object.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_variant.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_windows_thread_environment.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\scoped_winrt_initializer.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\shortcut.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\sphelper.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\typed_event_handler.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\vector.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\wait_chain.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\win_util.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\windows_full.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\winrt_storage_util.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\sequenced_task_runner_helpers.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\asan_invalid_access.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\close_handle_hook_win.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\crash_logging.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\gdi_debug_util_win.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\invalid_access_win.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\leak_tracker.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\leak_annotations.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\lazy_instance_helpers.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\debug\task_annotator.h">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\timer\elapsed_timer.h">
+      <Filter>src_vc141\base\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\component_export.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\critical_closure.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\deferred_sequenced_task_runner.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\environment.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\event_types.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\export_template.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_restrictions.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\format_macros.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\macros.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\native_library.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\no_destructor.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\observer_list_threadsafe.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\observer_list_types.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\optional.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\observer_list.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\observer_list_internal.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\post_task_and_reply_with_result_internal.h">
+      <Filter>src_vc141\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\message_loop_current.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump_for_ui.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump_for_io.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\timer\hi_res_timer_manager.h">
+      <Filter>src_vc141\base\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\json\json_reader.h">
+      <Filter>src_vc141\base\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\json\json_string_value_serializer.h">
+      <Filter>src_vc141\base\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\json\json_value_converter.h">
+      <Filter>src_vc141\base\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\json\json_writer.h">
+      <Filter>src_vc141\base\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\json\string_escape.h">
+      <Filter>src_vc141\base\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\json\json_file_value_serializer.h">
+      <Filter>src_vc141\base\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\json\json_parser.h">
+      <Filter>src_vc141\base\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\string_piece_forward.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\string_split.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\string_tokenizer.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\string_util.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\string_util_posix.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\string_util_win.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\string16.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\stringize_macros.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\stringprintf.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\sys_string_conversions.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\utf_offset_string_conversions.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\utf_string_conversion_utils.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\utf_string_conversions.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\char_traits.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\latin1_string_conversions.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\nullable_string16.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\old_utf_string_conversions.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\pattern.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\safe_sprintf.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\strcat.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\string_number_conversions.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\strings\string_piece.h">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\file_proxy.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\file_tracing.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\file_util.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\important_file_writer.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\memory_mapped_file.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\platform_file.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\scoped_file.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\scoped_temp_dir.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\dir_reader_fallback.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\dir_reader_linux.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\dir_reader_posix.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\file.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\file_enumerator.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\file_path.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\files\file_path_watcher.h">
+      <Filter>src_vc141\base\files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\win\windows_types.h">
+      <Filter>src_vc141\base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\single_thread_task_runner_thread_mode.h">
+      <Filter>src_vc141\base\task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_executor.h">
+      <Filter>src_vc141\base\task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_traits.h">
+      <Filter>src_vc141\base\task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_traits_details.h">
+      <Filter>src_vc141\base\task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_traits_extension.h">
+      <Filter>src_vc141\base\task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\test_task_traits_extension.h">
+      <Filter>src_vc141\base\task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\lazy_task_runner.h">
+      <Filter>src_vc141\base\task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\post_task.h">
+      <Filter>src_vc141\base\task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\scoped_set_task_priority_for_current_thread.h">
+      <Filter>src_vc141\base\task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\process\process_info.h">
+      <Filter>src_vc141\base\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\process\process_metrics.h">
+      <Filter>src_vc141\base\process</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\synchronization\waitable_event.h">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\synchronization\waitable_event_watcher.h">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\synchronization\atomic_flag.h">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\synchronization\cancellation_flag.h">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\synchronization\condition_variable.h">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\synchronization\lock.h">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\synchronization\lock_impl.h">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\synchronization\spin_wait.h">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\watchdog.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_collision_warner.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\real_time_domain.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\sequence_manager.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\sequence_manager_impl.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\sequenced_task_source.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue_impl.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue_selector.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue_selector_logic.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue_task_runner.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_time_observer.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\thread_controller.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\thread_controller_impl.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\thread_controller_with_message_pump_impl.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\time_domain.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\work_queue.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\work_queue_sets.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\associated_thread_id.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\enqueue_order.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\graceful_queue_shutdown_helper.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\intrusive_heap.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\lazily_deallocated_deque.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\lazy_now.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\moveable_auto_lock.h">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\unsafe_shared_memory_region.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\writable_shared_memory_region.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\memory\platform_shared_memory_region.h">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_bucket.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_cookie.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_direct_map_extent.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_freelist_entry.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_oom.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_page.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_root_base.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\spin_lock.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\address_space_randomization.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\oom.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\page_allocator.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\page_allocator_constants.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\page_allocator_internal.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\page_allocator_internals_win.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_alloc.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_alloc_constants.h">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\sequence_local_storage_slot.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\scoped_blocking_call.h">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\task_scheduler_impl.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\task.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\task_scheduler.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_single_thread_task_runner_manager.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\task_tracker.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool_impl.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool_params.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_stack.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_observer.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_params.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\tracked_ref.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_lock_impl.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_lock.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\service_thread.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det_hint_code.h">
+      <Filter>src_vc141\base\third_party\ced\src\compact_enc_det</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det.h">
+      <Filter>src_vc141\base\third_party\ced\src\compact_enc_det</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det_generated_tables.h">
+      <Filter>src_vc141\base\third_party\ced\src\compact_enc_det</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det_generated_tables2.h">
+      <Filter>src_vc141\base\third_party\ced\src\compact_enc_det</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\nspr\prtime.h">
+      <Filter>src_vc141\base\third_party\nspr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\modp_b64\modp_b64.h">
+      <Filter>src_vc141\base\third_party\modp_b64</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\modp_b64\modp_b64_data.h">
+      <Filter>src_vc141\base\third_party\modp_b64</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\dmg_fp\dmg_fp.h">
+      <Filter>src_vc141\base\third_party\dmg_fp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\message_loop\pending_task_queue.h">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\third_party\dynamic_annotations\dynamic_annotations.h">
+      <Filter>src_vc141\base\third_party\dynamic_annotations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\delayed_task_manager.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\priority_queue.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\can_schedule_sequence_observer.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\sequence.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\sequence_sort_key.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\environment_config.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\initialization_util.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\platform_native_worker_pool_win.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\single_thread_task_runner_thread_mode.h">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\posix\eintr_wrapper.h">
+      <Filter>src_vc141\base\posix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\power_monitor\power_monitor_source.h">
+      <Filter>src_vc141\base\power_monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\power_monitor\power_observer.h">
+      <Filter>src_vc141\base\power_monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\power_monitor\power_monitor.h">
+      <Filter>src_vc141\base\power_monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\power_monitor\power_monitor_device_source.h">
+      <Filter>src_vc141\base\power_monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\capnp\kj\async.h">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\capnp\kj\async-inl.h">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\thirdparty\g\capnp\kj\async-io.h">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\tolua++.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\tolua_event.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\tolua_fix.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\lua\ringbuffer.h">
+      <Filter>src_vc141\lua</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src_vc141\utils\BadWordFilter.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\KVDict.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\StringHash.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\URLCode.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\WordTable.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\platform\asciiops.c">
+      <Filter>src_vc141\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\platform\utilities.c">
+      <Filter>src_vc141\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\bit_flag.c">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\BitFlag.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\BufferFile.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\LRandom.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\TickedEvent.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\xml\pugixml.cpp">
+      <Filter>src_vc141\utils\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\json\cJSON.c">
+      <Filter>src_vc141\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\cipher\MD5Wrapper.cpp">
+      <Filter>src_vc141\cipher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\cipher\TEA.cpp">
+      <Filter>src_vc141\cipher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\cipher\tinyaes\aes128.c">
+      <Filter>src_vc141\cipher\tinyaes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\FileAnsi.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\NameCreator.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\cc_container\ObjectPool.cpp">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\cityhash\city.cc">
+      <Filter>src_vc141\cityhash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\c_container\cparray.c">
+      <Filter>src_vc141\c_container</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\timingwheel\timeout\timeout-bitops.c">
+      <Filter>src_vc141\core\timingwheel\timeout</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\timingwheel\timeout\test-timeout.c">
+      <Filter>src_vc141\core\timingwheel\timeout</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\timingwheel\timeout\timeout.c">
+      <Filter>src_vc141\core\timingwheel\timeout</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\TimeoutEventHub.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\TimeTicker.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\TimeSlicer.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\MyUtil.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\SimpleCalendar.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\TimeTickerAbs.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\TimeSlicerBase.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\framework\ConfigHub.cpp">
+      <Filter>src_vc141\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\framework\Cooldown.cpp">
+      <Filter>src_vc141\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\framework\DealingGuard.cpp">
+      <Filter>src_vc141\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\framework\HandlerHub.cpp">
+      <Filter>src_vc141\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\framework\FifoTaskQueue.cpp">
+      <Filter>src_vc141\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\simple_buf_alloc.c">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\bip_buf.c">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\CharCode.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\queue\MirrorBuffer.cpp">
+      <Filter>src_vc141\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\queue\BlockingQueue.cpp">
+      <Filter>src_vc141\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\queue\circle_queue.c">
+      <Filter>src_vc141\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\queue\MessageQueue.cpp">
+      <Filter>src_vc141\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\kj\KjSimpleEventLoop.cpp">
+      <Filter>src_vc141\core\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\cc_container\SortedVector.cpp">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\at_exit.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\base_paths.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\base_paths_win.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\base_switches.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\callback_helpers.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\callback_internal.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\command_line.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\cpu.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\environment.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\hash.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\location.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\logging.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\md5.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\path_service.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\pickle.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\rand_util.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\rand_util_win.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\run_loop.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\sequence_checker_impl.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\sequenced_task_runner.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\sys_info.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\sys_info_win.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task_runner.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\values.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\vlog.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\ref_counted.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\ref_counted_memory.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\weak_ptr.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\message_loop\message_loop.cc">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\message_loop\message_pump.cc">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\message_loop\message_pump_default.cc">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\message_loop\message_pump_win.cc">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\kill.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\kill_win.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\launch.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\launch_win.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\memory_win.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\process_handle_win.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\process_iterator.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\process_iterator_win.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\process_metrics.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\process_metrics_win.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\process_win.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\third_party\icu\icu_utf.cc">
+      <Filter>src_vc141\base\third_party\icu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\platform_thread_win.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\post_task_and_reply_impl.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\simple_thread.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_checker_impl.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_id_name_manager.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_local_storage.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_local_storage_win.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\time\time.cc">
+      <Filter>src_vc141\base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\time\time_win.cc">
+      <Filter>src_vc141\base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\timer\timer.cc">
+      <Filter>src_vc141\base\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\object_watcher.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\pe_image.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\registry.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\scoped_handle.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\scoped_process_information.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\startup_information.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\windows_version.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\wrapped_window_proc.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\base64.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\Base64Wrapper.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\crash_reporter\crash_reporter.cc">
+      <Filter>src_vc141\crash_reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\message_window.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_task_runner_handle.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\message_loop\message_loop_task_runner.cc">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\shared_memory_win.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\shared_memory_handle_win.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\shared_memory_handle.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\sequence_local_storage_map.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\sequenced_task_runner_handle.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\sha1.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\value_iterators.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\file_version_info_win.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\debugger_win.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\debugger.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\alias.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\stack_trace_win.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\stack_trace.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\profiler.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\sequence_token.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\pending_task.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\dump_without_crashing.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\resource_util.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\com_init_check_hook.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\patch_util.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\com_init_util.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\time\default_clock.cc">
+      <Filter>src_vc141\base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\time\default_tick_clock.cc">
+      <Filter>src_vc141\base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\time\tick_clock.cc">
+      <Filter>src_vc141\base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\time\clock.cc">
+      <Filter>src_vc141\base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\guid.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\snprintf\mysnprintf.c">
+      <Filter>src_vc141\core\snprintf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\clear_at_exit.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\log\StdPanLog.cpp">
+      <Filter>src_vc141\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\log\StdChromiumLog.cpp">
+      <Filter>src_vc141\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\crash_reporter\win\crash_service.cc">
+      <Filter>src_vc141\crash_reporter\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\crash_reporter\crash_reporter_in_process_win.cc">
+      <Filter>src_vc141\crash_reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\MyLuaTtest.cpp">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\lbind.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\lbind_test.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\crash_reporter\crash_reporter_win.cc">
+      <Filter>src_vc141\crash_reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\crash_reporter\win\crash_service_main.cc">
+      <Filter>src_vc141\crash_reporter\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\MyLua.cpp">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\lfs.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\CpuMetrics.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\class_from_stack.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_check_result.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_chunk.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_error.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_exception.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_function.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_helpers.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_open.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_pull.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_push.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_ref.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_registration.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_script.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_stack_dump.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_string.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_table.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\proxy_storage.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\push_pointer_internal.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\oolua_src\stack_get.cpp">
+      <Filter>src_vc141\lua\oolua_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\utils\CpuProfiler.cpp">
+      <Filter>src_vc141\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\core_profiler.c">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\function_meter.c">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\lua50_profiler.c">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\stack.c">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\clocks.c">
+      <Filter>src_vc141\lua\luaprofiler_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\snprintf\fast_memcpy.c">
+      <Filter>src_vc141\core\snprintf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\EventDispatcher.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\cc_container\test_allocator.cpp">
+      <Filter>src_vc141\cc_container</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\kj\KjSimpleIoContext.cpp">
+      <Filter>src_vc141\core\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\cipher\crc16.c">
+      <Filter>src_vc141\cipher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\MyLuaTimer.cpp">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\queue\CamelBlockingConcurrentQueue.cpp">
+      <Filter>src_vc141\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\queue\CamelConcurrentQueue.cpp">
+      <Filter>src_vc141\queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\MyLuaGlue.cpp">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\framework\ProtobufImporter.cpp">
+      <Filter>src_vc141\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\framework\ProtobufArenaHelper.cpp">
+      <Filter>src_vc141\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\extension_set.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_table_driven_lite.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_util.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\implicit_weak_message.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\coded_stream.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\zero_copy_stream.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\zero_copy_stream_impl_lite.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\message_lite.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\repeated_field.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\bytestream.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\int128.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\io_win32.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\status.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\statusor.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\structurally_valid.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\strutil.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wire_format_lite.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\any.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\any.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\api.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\compiler\importer.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\compiler\parser.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor_database.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\duration.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\dynamic_message.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\empty.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\extension_set_heavy.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\field_mask.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_reflection.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_table_driven.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\gzip_stream.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\printer.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\strtod.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\tokenizer.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\zero_copy_stream_impl.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\map_field.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\message.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\reflection_ops.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\service.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\source_context.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\struct.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\mathlimits.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\substitute.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\text_format.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\timestamp.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\type.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\unknown_field_set.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\delimited_message_util.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\field_comparator.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\field_mask_util.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\datapiece.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\default_value_objectwriter.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\error_listener.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\field_mask_utility.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_escaping.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_objectwriter.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_stream_parser.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\object_writer.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\proto_writer.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\protostream_objectsource.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\protostream_objectwriter.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\type_info.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\type_info_test_helper.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\utility.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\json_util.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\message_differencer.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\type_resolver_util.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wire_format.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wrappers.pb.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\_pb_stringprintf.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\_pb_stringpiece.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\_pb_time.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\_pb_time_util.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\_pb_common.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\_pb_arena.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\_pb_arenastring.cc">
+      <Filter>src_vc141\thirdparty\g\protobuf\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\guid_string.cc">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\http_upload.cc">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\string_utils.cc">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\handler\exception_handler.cc">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\exception_handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\sender\crash_report_sender.cc">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_report_sender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\crash_generation_client.cc">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\client_info.cc">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\crash_generation_server.cc">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\minidump_generator.cc">
+      <Filter>src_vc141\thirdparty\g\breakpad\client\windows\crash_generation_server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\api.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\api.deprecated.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\api.exitprocess.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\api.logputs.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\auto.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\logprintf.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\args.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\b64.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\blob.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\boolean.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\hostid.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\integer.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\interval.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\m2w.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\pointer.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\processid.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\real.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\slice.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\stream_character.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\threadid.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\bailout.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\be.context.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\be.parse.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\core.apidefs.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\date_elements_to_string.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\hostname.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\init_code_strings.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\util.processid.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\severity_strings.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\snprintf.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\strdup.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\strnlen.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\util.threadid.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\util.strnlen.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\backends\be.N.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\backends\bec.file.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\backends\bec.fprintf.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\frontends\fe.N.c">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\frontends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\_pan_exception.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\_pan_time.cpp">
+      <Filter>src_vc141\thirdparty\stlsoft\pantheios\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\time\time_override.cc">
+      <Filter>src_vc141\base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\big_endian.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\aligned_memory.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\discardable_memory.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\discardable_shared_memory.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\discardable_memory_allocator.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\version.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\value_conversions.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\unguessable_token.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\core_winrt_util.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\dllmain.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\enum_variant.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\i18n.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\iunknown_impl.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\iat_patch_function.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\process_startup_helper.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\scoped_bstr.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\scoped_com_initializer.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\scoped_handle_test_dll.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\scoped_handle_verifier.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\scoped_hstring.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\scoped_variant.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\scoped_winrt_initializer.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\shortcut.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\vector.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\wait_chain.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\win_util.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\win\winrt_storage_util.cc">
+      <Filter>src_vc141\base\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\asan_invalid_access.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\close_handle_hook_win.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\crash_logging.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\gdi_debug_util_win.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\invalid_access_win.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\lazy_instance_helpers.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\debug\task_annotator.cc">
+      <Filter>src_vc141\base\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\timer\elapsed_timer.cc">
+      <Filter>src_vc141\base\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\timer\hi_res_timer_manager_win.cc">
+      <Filter>src_vc141\base\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\deferred_sequenced_task_runner.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_restrictions.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\native_library.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\observer_list_types.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\observer_list_internal.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\observer_list_threadsafe.cc">
+      <Filter>src_vc141\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\message_loop\message_loop_current.cc">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\json\json_string_value_serializer.cc">
+      <Filter>src_vc141\base\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\json\json_value_converter.cc">
+      <Filter>src_vc141\base\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\json\json_writer.cc">
+      <Filter>src_vc141\base\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\json\string_escape.cc">
+      <Filter>src_vc141\base\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\json\json_file_value_serializer.cc">
+      <Filter>src_vc141\base\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\json\json_parser.cc">
+      <Filter>src_vc141\base\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\json\json_reader.cc">
+      <Filter>src_vc141\base\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\string_split.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\string_util.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\string_util_constants.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\stringprintf.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\sys_string_conversions_win.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\utf_offset_string_conversions.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\utf_string_conversion_utils.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\utf_string_conversions.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\latin1_string_conversions.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\nullable_string16.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\old_utf_string_conversions.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\pattern.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\safe_sprintf.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\strcat.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\string_number_conversions.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\strings\string_piece.cc">
+      <Filter>src_vc141\base\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_path_watcher_win.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_proxy.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_tracing.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_util.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_util_win.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_win.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\important_file_writer.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\memory_mapped_file.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\memory_mapped_file_win.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\scoped_file.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\scoped_temp_dir.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_enumerator.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_enumerator_win.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_path.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_path_constants.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\files\file_path_watcher.cc">
+      <Filter>src_vc141\base\files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_executor.cc">
+      <Filter>src_vc141\base\task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_traits.cc">
+      <Filter>src_vc141\base\task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\test_task_traits_extension.cc">
+      <Filter>src_vc141\base\task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\lazy_task_runner.cc">
+      <Filter>src_vc141\base\task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\scoped_set_task_priority_for_current_thread.cc">
+      <Filter>src_vc141\base\task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\post_task.cc">
+      <Filter>src_vc141\base\task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\_chromium_base_process_memory.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\process\process_info_win.cc">
+      <Filter>src_vc141\base\process</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\synchronization\waitable_event_watcher_win.cc">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\synchronization\waitable_event_win.cc">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\synchronization\atomic_flag.cc">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\synchronization\condition_variable_win.cc">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\synchronization\lock.cc">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\synchronization\lock_impl_win.cc">
+      <Filter>src_vc141\base\synchronization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\watchdog.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_collision_warner.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\sequence_manager.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\sequence_manager_impl.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\task_queue.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\task_queue_impl.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\task_queue_selector.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\task_queue_task_runner.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\thread_controller_impl.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\thread_controller_with_message_pump_impl.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\time_domain.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\work_queue.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\work_queue_sets.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\enqueue_order.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\graceful_queue_shutdown_helper.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\lazy_now.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\real_time_domain.cc">
+      <Filter>src_vc141\base\task\sequence_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\unsafe_shared_memory_region.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\writable_shared_memory_region.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\memory\platform_shared_memory_region.cc">
+      <Filter>src_vc141\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_oom.cc">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_page.cc">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_root_base.cc">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\spin_lock.cc">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\address_space_randomization.cc">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\page_allocator.cc">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_alloc.cc">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_bucket.cc">
+      <Filter>src_vc141\base\allocator\partition_allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\sequence_local_storage_slot.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\scoped_blocking_call.cc">
+      <Filter>src_vc141\base\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\task_scheduler_impl.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\task.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\task_scheduler.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_single_thread_task_runner_manager.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\task_tracker.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool_impl.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool_params.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_stack.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_lock_impl.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\service_thread.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det.cc">
+      <Filter>src_vc141\base\third_party\ced\src\compact_enc_det</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det_hint_code.cc">
+      <Filter>src_vc141\base\third_party\ced\src\compact_enc_det</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\third_party\nspr\prtime.cc">
+      <Filter>src_vc141\base\third_party\nspr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\third_party\modp_b64\modp_b64.cc">
+      <Filter>src_vc141\base\third_party\modp_b64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\third_party\dmg_fp\g_fmt.cc">
+      <Filter>src_vc141\base\third_party\dmg_fp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\third_party\dmg_fp\dtoa_wrapper.cc">
+      <Filter>src_vc141\base\third_party\dmg_fp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\third_party\superfasthash\superfasthash.c">
+      <Filter>src_vc141\base\third_party\superfasthash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\message_loop\pending_task_queue.cc">
+      <Filter>src_vc141\base\message_loop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\third_party\dynamic_annotations\dynamic_annotations.c">
+      <Filter>src_vc141\base\third_party\dynamic_annotations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\delayed_task_manager.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\priority_queue.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\sequence_sort_key.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\sequence.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\environment_config.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\initialization_util.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\platform_native_worker_pool_win.cc">
+      <Filter>src_vc141\base\task\task_scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\power_monitor\power_monitor_device_source_win.cc">
+      <Filter>src_vc141\base\power_monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\power_monitor\power_monitor_source.cc">
+      <Filter>src_vc141\base\power_monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\power_monitor\power_monitor.cc">
+      <Filter>src_vc141\base\power_monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\power_monitor\power_monitor_device_source.cc">
+      <Filter>src_vc141\base\power_monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\encoding.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\exception.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\filesystem.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\filesystem-disk-win32.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\io.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\main.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\mutex.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\refcount.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\string.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\string-tree.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\table.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\units.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\arena.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\array.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\async.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\async-io.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\async-io-win32.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\async-win32.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\common.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\debug.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_hash.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_thread.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_memory.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_time.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_timer.cc">
+      <Filter>src_vc141\thirdparty\g\capnp\kj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\tolua_is.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\tolua_map.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\tolua_push.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\tolua_to.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\tolua_event.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\tolua_fix.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\lua\ringbuffer.c">
+      <Filter>src_vc141\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\core\Heartbeat.cpp">
+      <Filter>src_vc141\core</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

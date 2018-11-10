@@ -1,0 +1,1305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>mytoolkit_vc141</ProjectName>
+    <ProjectGuid>{C6DE59CF-740E-4715-9430-7A8A55D73ED6}</ProjectGuid>
+    <RootNamespace>SgServer</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(Platform)\$(ProjectName).dir\$(Configuration)\</IntDir>
+    <IncludePath>C:\Program Files (x86)\Windows Kits\8.1\Include\shared;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)..\lib\$(Configuration)\</OutDir>
+    <TargetName>mytoolkit</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(Platform)\$(ProjectName).dir\$(Configuration)\</IntDir>
+    <TargetName>mytoolkit</TargetName>
+    <IncludePath>C:\Program Files (x86)\Windows Kits\8.1\Include\shared;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)..\lib\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\www\_nneesshh_git\luabindings_tools\luatools\lua-5.3.5\src;../src_vc141;../src_vc141/base/third_party/icu/source/common;../src_vc141/base/third_party/icu/source/i18n;../src_vc141/base/third_party/ced/src;../src_vc141/thirdparty/stlsoft/STLSoft/include;../src_vc141/thirdparty/stlsoft/pantheios/include;../src_vc141/thirdparty/g/breakpad/src;../src_vc141/thirdparty/g/protobuf/src;../src_vc141/thirdparty/g/capnp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;_LIB;_CONSOLE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\www\_nneesshh_git\luabindings_tools\luatools\lua-5.3.5\src;../src_vc141;../src_vc141/base/third_party/icu/source/common;../src_vc141/base/third_party/icu/source/i18n;../src_vc141/base/third_party/ced/src;../src_vc141/thirdparty/stlsoft/STLSoft/include;../src_vc141/thirdparty/stlsoft/pantheios/include;../src_vc141/thirdparty/g/breakpad/src;../src_vc141/thirdparty/g/protobuf/src;../src_vc141/thirdparty/g/capnp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <Verbose>
+      </Verbose>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\address_space_randomization.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\oom.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\page_allocator.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\page_allocator_constants.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\page_allocator_internal.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\page_allocator_internals_win.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_alloc.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_alloc_constants.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_bucket.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_cookie.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_direct_map_extent.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_freelist_entry.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_oom.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_page.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\partition_root_base.h" />
+    <ClInclude Include="..\src_vc141\base\allocator\partition_allocator\spin_lock.h" />
+    <ClInclude Include="..\src_vc141\base\atomicops.h" />
+    <ClInclude Include="..\src_vc141\base\atomicops_internals_atomicword_compat.h" />
+    <ClInclude Include="..\src_vc141\base\atomicops_internals_x86_msvc.h" />
+    <ClInclude Include="..\src_vc141\base\atomic_ref_count.h" />
+    <ClInclude Include="..\src_vc141\base\at_exit.h" />
+    <ClInclude Include="..\src_vc141\base\big_endian.h" />
+    <ClInclude Include="..\src_vc141\base\bits.h" />
+    <ClInclude Include="..\src_vc141\base\bit_cast.h" />
+    <ClInclude Include="..\src_vc141\base\callback_list.h" />
+    <ClInclude Include="..\src_vc141\base\clear_at_exit.h" />
+    <ClInclude Include="..\src_vc141\base\base64.h" />
+    <ClInclude Include="..\src_vc141\base\base_export.h" />
+    <ClInclude Include="..\src_vc141\base\base_paths.h" />
+    <ClInclude Include="..\src_vc141\base\base_switches.h" />
+    <ClInclude Include="..\src_vc141\base\bind.h" />
+    <ClInclude Include="..\src_vc141\base\bind_helpers.h" />
+    <ClInclude Include="..\src_vc141\base\bind_internal.h" />
+    <ClInclude Include="..\src_vc141\base\build\buildflag.h" />
+    <ClInclude Include="..\src_vc141\base\build\build_config.h" />
+    <ClInclude Include="..\src_vc141\base\callback.h" />
+    <ClInclude Include="..\src_vc141\base\callback_forward.h" />
+    <ClInclude Include="..\src_vc141\base\callback_helpers.h" />
+    <ClInclude Include="..\src_vc141\base\callback_internal.h" />
+    <ClInclude Include="..\src_vc141\base\cancelable_callback.h" />
+    <ClInclude Include="..\src_vc141\base\command_line.h" />
+    <ClInclude Include="..\src_vc141\base\compiler_specific.h" />
+    <ClInclude Include="..\src_vc141\base\component_export.h" />
+    <ClInclude Include="..\src_vc141\base\containers\hash_tables.h" />
+    <ClInclude Include="..\src_vc141\base\containers\linked_list.h" />
+    <ClInclude Include="..\src_vc141\base\containers\mru_cache.h" />
+    <ClInclude Include="..\src_vc141\base\containers\small_map.h" />
+    <ClInclude Include="..\src_vc141\base\containers\stack_container.h" />
+    <ClInclude Include="..\src_vc141\base\cpu.h" />
+    <ClInclude Include="..\src_vc141\base\critical_closure.h" />
+    <ClInclude Include="..\src_vc141\base\debug\alias.h" />
+    <ClInclude Include="..\src_vc141\base\debug\asan_invalid_access.h" />
+    <ClInclude Include="..\src_vc141\base\debug\close_handle_hook_win.h" />
+    <ClInclude Include="..\src_vc141\base\debug\crash_logging.h" />
+    <ClInclude Include="..\src_vc141\base\debug\debugger.h" />
+    <ClInclude Include="..\src_vc141\base\debug\dump_without_crashing.h" />
+    <ClInclude Include="..\src_vc141\base\debug\gdi_debug_util_win.h" />
+    <ClInclude Include="..\src_vc141\base\debug\invalid_access_win.h" />
+    <ClInclude Include="..\src_vc141\base\debug\leak_annotations.h" />
+    <ClInclude Include="..\src_vc141\base\debug\leak_tracker.h" />
+    <ClInclude Include="..\src_vc141\base\debug\profiler.h" />
+    <ClInclude Include="..\src_vc141\base\debug\stack_trace.h" />
+    <ClInclude Include="..\src_vc141\base\debug\task_annotator.h" />
+    <ClInclude Include="..\src_vc141\base\deferred_sequenced_task_runner.h" />
+    <ClInclude Include="..\src_vc141\base\environment.h" />
+    <ClInclude Include="..\src_vc141\base\event_types.h" />
+    <ClInclude Include="..\src_vc141\base\export_template.h" />
+    <ClInclude Include="..\src_vc141\base\files\dir_reader_fallback.h" />
+    <ClInclude Include="..\src_vc141\base\files\dir_reader_linux.h" />
+    <ClInclude Include="..\src_vc141\base\files\dir_reader_posix.h" />
+    <ClInclude Include="..\src_vc141\base\files\file.h" />
+    <ClInclude Include="..\src_vc141\base\files\file_enumerator.h" />
+    <ClInclude Include="..\src_vc141\base\files\file_path.h" />
+    <ClInclude Include="..\src_vc141\base\files\file_path_watcher.h" />
+    <ClInclude Include="..\src_vc141\base\files\file_proxy.h" />
+    <ClInclude Include="..\src_vc141\base\files\file_tracing.h" />
+    <ClInclude Include="..\src_vc141\base\files\file_util.h" />
+    <ClInclude Include="..\src_vc141\base\files\important_file_writer.h" />
+    <ClInclude Include="..\src_vc141\base\files\memory_mapped_file.h" />
+    <ClInclude Include="..\src_vc141\base\files\platform_file.h" />
+    <ClInclude Include="..\src_vc141\base\files\scoped_file.h" />
+    <ClInclude Include="..\src_vc141\base\files\scoped_temp_dir.h" />
+    <ClInclude Include="..\src_vc141\base\file_version_info.h" />
+    <ClInclude Include="..\src_vc141\base\file_version_info_win.h" />
+    <ClInclude Include="..\src_vc141\base\format_macros.h" />
+    <ClInclude Include="..\src_vc141\base\guid.h" />
+    <ClInclude Include="..\src_vc141\base\hash.h" />
+    <ClInclude Include="..\src_vc141\base\json\json_file_value_serializer.h" />
+    <ClInclude Include="..\src_vc141\base\json\json_parser.h" />
+    <ClInclude Include="..\src_vc141\base\json\json_reader.h" />
+    <ClInclude Include="..\src_vc141\base\json\json_string_value_serializer.h" />
+    <ClInclude Include="..\src_vc141\base\json\json_value_converter.h" />
+    <ClInclude Include="..\src_vc141\base\json\json_writer.h" />
+    <ClInclude Include="..\src_vc141\base\json\string_escape.h" />
+    <ClInclude Include="..\src_vc141\base\lazy_instance.h" />
+    <ClInclude Include="..\src_vc141\base\lazy_instance_helpers.h" />
+    <ClInclude Include="..\src_vc141\base\location.h" />
+    <ClInclude Include="..\src_vc141\base\logging.h" />
+    <ClInclude Include="..\src_vc141\base\macros.h" />
+    <ClInclude Include="..\src_vc141\base\md5.h" />
+    <ClInclude Include="..\src_vc141\base\memory\aligned_memory.h" />
+    <ClInclude Include="..\src_vc141\base\memory\discardable_memory.h" />
+    <ClInclude Include="..\src_vc141\base\memory\discardable_memory_allocator.h" />
+    <ClInclude Include="..\src_vc141\base\memory\discardable_shared_memory.h" />
+    <ClInclude Include="..\src_vc141\base\memory\free_deleter.h" />
+    <ClInclude Include="..\src_vc141\base\memory\linked_ptr.h" />
+    <ClInclude Include="..\src_vc141\base\memory\platform_shared_memory_region.h" />
+    <ClInclude Include="..\src_vc141\base\memory\ptr_util.h" />
+    <ClInclude Include="..\src_vc141\base\memory\raw_scoped_refptr_mismatch_checker.h" />
+    <ClInclude Include="..\src_vc141\base\memory\ref_counted.h" />
+    <ClInclude Include="..\src_vc141\base\memory\ref_counted_memory.h" />
+    <ClInclude Include="..\src_vc141\base\memory\scoped_policy.h" />
+    <ClInclude Include="..\src_vc141\base\memory\scoped_refptr.h" />
+    <ClInclude Include="..\src_vc141\base\memory\shared_memory.h" />
+    <ClInclude Include="..\src_vc141\base\memory\shared_memory_handle.h" />
+    <ClInclude Include="..\src_vc141\base\memory\singleton.h" />
+    <ClInclude Include="..\src_vc141\base\memory\unsafe_shared_memory_region.h" />
+    <ClInclude Include="..\src_vc141\base\memory\weak_ptr.h" />
+    <ClInclude Include="..\src_vc141\base\memory\writable_shared_memory_region.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\message_loop.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\message_loop_current.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\message_loop_task_runner.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump_default.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump_for_io.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump_for_ui.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\message_pump_win.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\pending_task_queue.h" />
+    <ClInclude Include="..\src_vc141\base\message_loop\timer_slack.h" />
+    <ClInclude Include="..\src_vc141\base\native_library.h" />
+    <ClInclude Include="..\src_vc141\base\no_destructor.h" />
+    <ClInclude Include="..\src_vc141\base\observer_list.h" />
+    <ClInclude Include="..\src_vc141\base\observer_list_internal.h" />
+    <ClInclude Include="..\src_vc141\base\observer_list_threadsafe.h" />
+    <ClInclude Include="..\src_vc141\base\observer_list_types.h" />
+    <ClInclude Include="..\src_vc141\base\optional.h" />
+    <ClInclude Include="..\src_vc141\base\path_service.h" />
+    <ClInclude Include="..\src_vc141\base\pending_task.h" />
+    <ClInclude Include="..\src_vc141\base\pickle.h" />
+    <ClInclude Include="..\src_vc141\base\posix\eintr_wrapper.h" />
+    <ClInclude Include="..\src_vc141\base\post_task_and_reply_with_result_internal.h" />
+    <ClInclude Include="..\src_vc141\base\power_monitor\power_monitor.h" />
+    <ClInclude Include="..\src_vc141\base\power_monitor\power_monitor_device_source.h" />
+    <ClInclude Include="..\src_vc141\base\power_monitor\power_monitor_source.h" />
+    <ClInclude Include="..\src_vc141\base\power_monitor\power_observer.h" />
+    <ClInclude Include="..\src_vc141\base\process\kill.h" />
+    <ClInclude Include="..\src_vc141\base\process\launch.h" />
+    <ClInclude Include="..\src_vc141\base\process\memory.h" />
+    <ClInclude Include="..\src_vc141\base\process\process.h" />
+    <ClInclude Include="..\src_vc141\base\process\process_handle.h" />
+    <ClInclude Include="..\src_vc141\base\process\process_info.h" />
+    <ClInclude Include="..\src_vc141\base\process\process_iterator.h" />
+    <ClInclude Include="..\src_vc141\base\process\process_metrics.h" />
+    <ClInclude Include="..\src_vc141\base\rand_util.h" />
+    <ClInclude Include="..\src_vc141\base\run_loop.h" />
+    <ClInclude Include="..\src_vc141\base\scoped_clear_errno.h" />
+    <ClInclude Include="..\src_vc141\base\sequenced_task_runner.h" />
+    <ClInclude Include="..\src_vc141\base\sequenced_task_runner_helpers.h" />
+    <ClInclude Include="..\src_vc141\base\sequence_checker.h" />
+    <ClInclude Include="..\src_vc141\base\sequence_checker_impl.h" />
+    <ClInclude Include="..\src_vc141\base\sequence_token.h" />
+    <ClInclude Include="..\src_vc141\base\sha1.h" />
+    <ClInclude Include="..\src_vc141\base\stl_util.h" />
+    <ClInclude Include="..\src_vc141\base\strings\char_traits.h" />
+    <ClInclude Include="..\src_vc141\base\strings\latin1_string_conversions.h" />
+    <ClInclude Include="..\src_vc141\base\strings\nullable_string16.h" />
+    <ClInclude Include="..\src_vc141\base\strings\old_utf_string_conversions.h" />
+    <ClInclude Include="..\src_vc141\base\strings\pattern.h" />
+    <ClInclude Include="..\src_vc141\base\strings\safe_sprintf.h" />
+    <ClInclude Include="..\src_vc141\base\strings\strcat.h" />
+    <ClInclude Include="..\src_vc141\base\strings\string16.h" />
+    <ClInclude Include="..\src_vc141\base\strings\stringize_macros.h" />
+    <ClInclude Include="..\src_vc141\base\strings\stringprintf.h" />
+    <ClInclude Include="..\src_vc141\base\strings\string_number_conversions.h" />
+    <ClInclude Include="..\src_vc141\base\strings\string_piece.h" />
+    <ClInclude Include="..\src_vc141\base\strings\string_piece_forward.h" />
+    <ClInclude Include="..\src_vc141\base\strings\string_split.h" />
+    <ClInclude Include="..\src_vc141\base\strings\string_tokenizer.h" />
+    <ClInclude Include="..\src_vc141\base\strings\string_util.h" />
+    <ClInclude Include="..\src_vc141\base\strings\string_util_posix.h" />
+    <ClInclude Include="..\src_vc141\base\strings\string_util_win.h" />
+    <ClInclude Include="..\src_vc141\base\strings\sys_string_conversions.h" />
+    <ClInclude Include="..\src_vc141\base\strings\utf_offset_string_conversions.h" />
+    <ClInclude Include="..\src_vc141\base\strings\utf_string_conversions.h" />
+    <ClInclude Include="..\src_vc141\base\strings\utf_string_conversion_utils.h" />
+    <ClInclude Include="..\src_vc141\base\synchronization\atomic_flag.h" />
+    <ClInclude Include="..\src_vc141\base\synchronization\cancellation_flag.h" />
+    <ClInclude Include="..\src_vc141\base\synchronization\condition_variable.h" />
+    <ClInclude Include="..\src_vc141\base\synchronization\lock.h" />
+    <ClInclude Include="..\src_vc141\base\synchronization\lock_impl.h" />
+    <ClInclude Include="..\src_vc141\base\synchronization\spin_wait.h" />
+    <ClInclude Include="..\src_vc141\base\synchronization\waitable_event.h" />
+    <ClInclude Include="..\src_vc141\base\synchronization\waitable_event_watcher.h" />
+    <ClInclude Include="..\src_vc141\base\sys_info.h" />
+    <ClInclude Include="..\src_vc141\base\task\lazy_task_runner.h" />
+    <ClInclude Include="..\src_vc141\base\task\post_task.h" />
+    <ClInclude Include="..\src_vc141\base\task\scoped_set_task_priority_for_current_thread.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\associated_thread_id.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\enqueue_order.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\graceful_queue_shutdown_helper.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\intrusive_heap.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\lazily_deallocated_deque.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\lazy_now.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\moveable_auto_lock.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\real_time_domain.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\sequenced_task_source.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\sequence_manager.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\sequence_manager_impl.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue_impl.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue_selector.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue_selector_logic.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_queue_task_runner.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\task_time_observer.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\thread_controller.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\thread_controller_impl.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\thread_controller_with_message_pump_impl.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\time_domain.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\work_queue.h" />
+    <ClInclude Include="..\src_vc141\base\task\sequence_manager\work_queue_sets.h" />
+    <ClInclude Include="..\src_vc141\base\task\single_thread_task_runner_thread_mode.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_executor.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\can_schedule_sequence_observer.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\delayed_task_manager.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\environment_config.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\initialization_util.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\platform_native_worker_pool_win.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\priority_queue.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_lock.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_lock_impl.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_single_thread_task_runner_manager.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_observer.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_params.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool_impl.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool_params.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_stack.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\sequence.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\sequence_sort_key.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\service_thread.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\single_thread_task_runner_thread_mode.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\task.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\task_scheduler.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\task_scheduler_impl.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\task_tracker.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_scheduler\tracked_ref.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_traits.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_traits_details.h" />
+    <ClInclude Include="..\src_vc141\base\task\task_traits_extension.h" />
+    <ClInclude Include="..\src_vc141\base\task\test_task_traits_extension.h" />
+    <ClInclude Include="..\src_vc141\base\task_runner.h" />
+    <ClInclude Include="..\src_vc141\base\task_runner_util.h" />
+    <ClInclude Include="..\src_vc141\base\template_util.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det_generated_tables.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det_generated_tables2.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det_hint_code.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\dmg_fp\dmg_fp.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\dynamic_annotations\dynamic_annotations.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\icu\icu_utf.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\modp_b64\modp_b64.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\modp_b64\modp_b64_data.h" />
+    <ClInclude Include="..\src_vc141\base\third_party\nspr\prtime.h" />
+    <ClInclude Include="..\src_vc141\base\threading\platform_thread.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\platform_thread_win.h" />
+    <ClInclude Include="..\src_vc141\base\threading\post_task_and_reply_impl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\scoped_blocking_call.h" />
+    <ClInclude Include="..\src_vc141\base\threading\sequenced_task_runner_handle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\sequenced_worker_pool.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\sequence_local_storage_map.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\sequence_local_storage_slot.h" />
+    <ClInclude Include="..\src_vc141\base\threading\simple_thread.h" />
+    <ClInclude Include="..\src_vc141\base\threading\thread.h" />
+    <ClInclude Include="..\src_vc141\base\threading\thread_checker.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_checker_impl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_collision_warner.h" />
+    <ClInclude Include="..\src_vc141\base\threading\thread_id_name_manager.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_local.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_local_storage.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\thread_restrictions.h" />
+    <ClInclude Include="..\src_vc141\base\threading\thread_task_runner_handle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\src_vc141\base\threading\watchdog.h" />
+    <ClInclude Include="..\src_vc141\base\thread_annotations.h" />
+    <ClInclude Include="..\src_vc141\base\timer\elapsed_timer.h" />
+    <ClInclude Include="..\src_vc141\base\timer\hi_res_timer_manager.h" />
+    <ClInclude Include="..\src_vc141\base\timer\timer.h" />
+    <ClInclude Include="..\src_vc141\base\time\clock.h" />
+    <ClInclude Include="..\src_vc141\base\time\default_clock.h" />
+    <ClInclude Include="..\src_vc141\base\time\default_tick_clock.h" />
+    <ClInclude Include="..\src_vc141\base\time\tick_clock.h" />
+    <ClInclude Include="..\src_vc141\base\time\time.h" />
+    <ClInclude Include="..\src_vc141\base\time\time_override.h" />
+    <ClInclude Include="..\src_vc141\base\tuple.h" />
+    <ClInclude Include="..\src_vc141\base\unguessable_token.h" />
+    <ClInclude Include="..\src_vc141\base\values.h" />
+    <ClInclude Include="..\src_vc141\base\value_conversions.h" />
+    <ClInclude Include="..\src_vc141\base\value_iterators.h" />
+    <ClInclude Include="..\src_vc141\base\version.h" />
+    <ClInclude Include="..\src_vc141\base\vlog.h" />
+    <ClInclude Include="..\src_vc141\base\win\async_operation.h" />
+    <ClInclude Include="..\src_vc141\base\win\atl.h" />
+    <ClInclude Include="..\src_vc141\base\win\com_init_check_hook.h" />
+    <ClInclude Include="..\src_vc141\base\win\com_init_util.h" />
+    <ClInclude Include="..\src_vc141\base\win\core_winrt_util.h" />
+    <ClInclude Include="..\src_vc141\base\win\current_module.h" />
+    <ClInclude Include="..\src_vc141\base\win\enum_variant.h" />
+    <ClInclude Include="..\src_vc141\base\win\i18n.h" />
+    <ClInclude Include="..\src_vc141\base\win\iat_patch_function.h" />
+    <ClInclude Include="..\src_vc141\base\win\iunknown_impl.h" />
+    <ClInclude Include="..\src_vc141\base\win\message_window.h" />
+    <ClInclude Include="..\src_vc141\base\win\object_watcher.h" />
+    <ClInclude Include="..\src_vc141\base\win\patch_util.h" />
+    <ClInclude Include="..\src_vc141\base\win\pe_image.h" />
+    <ClInclude Include="..\src_vc141\base\win\process_startup_helper.h" />
+    <ClInclude Include="..\src_vc141\base\win\propvarutil.h" />
+    <ClInclude Include="..\src_vc141\base\win\reference.h" />
+    <ClInclude Include="..\src_vc141\base\win\registry.h" />
+    <ClInclude Include="..\src_vc141\base\win\resource_util.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_bstr.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_com_initializer.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_co_mem.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_gdi_object.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_handle.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_handle_verifier.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_hdc.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_hglobal.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_hstring.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_process_information.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_propvariant.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_select_object.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_variant.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_windows_thread_environment.h" />
+    <ClInclude Include="..\src_vc141\base\win\scoped_winrt_initializer.h" />
+    <ClInclude Include="..\src_vc141\base\win\shlwapi.h" />
+    <ClInclude Include="..\src_vc141\base\win\shortcut.h" />
+    <ClInclude Include="..\src_vc141\base\win\sphelper.h" />
+    <ClInclude Include="..\src_vc141\base\win\startup_information.h" />
+    <ClInclude Include="..\src_vc141\base\win\typed_event_handler.h" />
+    <ClInclude Include="..\src_vc141\base\win\vector.h" />
+    <ClInclude Include="..\src_vc141\base\win\wait_chain.h" />
+    <ClInclude Include="..\src_vc141\base\win\windows_full.h" />
+    <ClInclude Include="..\src_vc141\base\win\windows_types.h" />
+    <ClInclude Include="..\src_vc141\base\win\windows_version.h" />
+    <ClInclude Include="..\src_vc141\base\win\winrt_storage_util.h" />
+    <ClInclude Include="..\src_vc141\base\win\win_util.h" />
+    <ClInclude Include="..\src_vc141\base\win\wrapped_window_proc.h" />
+    <ClInclude Include="..\src_vc141\lua\ringbuffer.h" />
+    <ClInclude Include="..\src_vc141\lua\tolua++.h" />
+    <ClInclude Include="..\src_vc141\lua\tolua_event.h" />
+    <ClInclude Include="..\src_vc141\lua\tolua_fix.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\client_info.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\crash_generation_client.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\crash_generation_server.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\minidump_generator.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\handler\exception_handler.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\sender\crash_report_sender.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\guid_string.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\http_upload.h" />
+    <ClInclude Include="..\src_vc141\cc_container\FSBAllocator.h" />
+    <ClInclude Include="..\src_vc141\cc_container\FSBPool.h" />
+    <ClInclude Include="..\src_vc141\cc_container\FSBPoolAllocator.h" />
+    <ClInclude Include="..\src_vc141\cc_container\malloc_allocator.h" />
+    <ClInclude Include="..\src_vc141\cc_container\new_delete_allocator.h" />
+    <ClInclude Include="..\src_vc141\cc_container\ObjectPool.hpp" />
+    <ClInclude Include="..\src_vc141\cc_container\SortedVector.hpp" />
+    <ClInclude Include="..\src_vc141\cipher\crc16.h" />
+    <ClInclude Include="..\src_vc141\core\bip_buf.h" />
+    <ClInclude Include="..\src_vc141\core\EventDispatcher.h" />
+    <ClInclude Include="..\src_vc141\core\IHeartbeat.h" />
+    <ClInclude Include="..\src_vc141\cipher\MD5Wrapper.h" />
+    <ClInclude Include="..\src_vc141\cipher\TEA.h" />
+    <ClInclude Include="..\src_vc141\cipher\tinyaes\aes128.h" />
+    <ClInclude Include="..\src_vc141\cityhash\city.h" />
+    <ClInclude Include="..\src_vc141\cityhash\citycrc.h" />
+    <ClInclude Include="..\src_vc141\core\BitFlag.h" />
+    <ClInclude Include="..\src_vc141\core\bit_flag.h" />
+    <ClInclude Include="..\src_vc141\core\BufferFile.h" />
+    <ClInclude Include="..\src_vc141\core\FileAnsi.h" />
+    <ClInclude Include="..\src_vc141\core\Heartbeat.h" />
+    <ClInclude Include="..\src_vc141\core\ITimeSlicer.h" />
+    <ClInclude Include="..\src_vc141\core\kj\KjSimpleEventLoop.h" />
+    <ClInclude Include="..\src_vc141\core\kj\KjSimpleIoContext.h" />
+    <ClInclude Include="..\src_vc141\core\LRandom.h" />
+    <ClInclude Include="..\src_vc141\core\MyMacros.h" />
+    <ClInclude Include="..\src_vc141\core\IRandomAccessFile.h" />
+    <ClInclude Include="..\src_vc141\core\SimpleCalendar.h" />
+    <ClInclude Include="..\src_vc141\core\SimpleTimer.h" />
+    <ClInclude Include="..\src_vc141\core\simple_buf_alloc.h" />
+    <ClInclude Include="..\src_vc141\core\snprintf\fast_memcpy.h" />
+    <ClInclude Include="..\src_vc141\core\snprintf\mysnprintf.h" />
+    <ClInclude Include="..\src_vc141\core\TickedEvent.h" />
+    <ClInclude Include="..\src_vc141\core\TimeSlicer.h" />
+    <ClInclude Include="..\src_vc141\core\TimeSlicerBase.h" />
+    <ClInclude Include="..\src_vc141\core\TimeTickerAbs.h" />
+    <ClInclude Include="..\src_vc141\core\TimeTicker.h" />
+    <ClInclude Include="..\src_vc141\core\TimeoutEventHub.h" />
+    <ClInclude Include="..\src_vc141\core\timingwheel\timeout\timeout-debug.h" />
+    <ClInclude Include="..\src_vc141\core\timingwheel\timeout\timeout.h" />
+    <ClInclude Include="..\src_vc141\crash_reporter\crash_reporter.h" />
+    <ClInclude Include="..\src_vc141\crash_reporter\crash_reporter_in_process_win.h" />
+    <ClInclude Include="..\src_vc141\crash_reporter\crash_reporter_win.h" />
+    <ClInclude Include="..\src_vc141\crash_reporter\win\crash_service.h" />
+    <ClInclude Include="..\src_vc141\crash_reporter\win\crash_service_main.h" />
+    <ClInclude Include="..\src_vc141\c_container\cparray.h" />
+    <ClInclude Include="..\src_vc141\c_container\utarray.h" />
+    <ClInclude Include="..\src_vc141\c_container\uthash.h" />
+    <ClInclude Include="..\src_vc141\c_container\utlist.h" />
+    <ClInclude Include="..\src_vc141\c_container\utstring.h" />
+    <ClInclude Include="..\src_vc141\framework\ConfigHub.h" />
+    <ClInclude Include="..\src_vc141\framework\Cooldown.h" />
+    <ClInclude Include="..\src_vc141\framework\DealingGuard.h" />
+    <ClInclude Include="..\src_vc141\framework\FifoTaskQueue.h" />
+    <ClInclude Include="..\src_vc141\framework\HandlerHub.h" />
+    <ClInclude Include="..\src_vc141\framework\IAppBase.h" />
+    <ClInclude Include="..\src_vc141\framework\IAppPlugin.h" />
+    <ClInclude Include="..\src_vc141\framework\ICapnprotoRpcHandler.h" />
+    <ClInclude Include="..\src_vc141\framework\IConfig.h" />
+    <ClInclude Include="..\src_vc141\framework\IGameApp.h" />
+    <ClInclude Include="..\src_vc141\framework\IHandler.h" />
+    <ClInclude Include="..\src_vc141\framework\IRedisHandler.h" />
+    <ClInclude Include="..\src_vc141\framework\ProtobufArenaHelper.h" />
+    <ClInclude Include="..\src_vc141\framework\ProtobufImporter.h" />
+    <ClInclude Include="..\src_vc141\json\cJSON.h" />
+    <ClInclude Include="..\src_vc141\log\StdChromiumLog.h" />
+    <ClInclude Include="..\src_vc141\log\StdLog.h" />
+    <ClInclude Include="..\src_vc141\log\StdLogLevelDef.h" />
+    <ClInclude Include="..\src_vc141\log\StdPanLog.h" />
+    <ClInclude Include="..\src_vc141\lua\lbind.h" />
+    <ClInclude Include="..\src_vc141\lua\lfs.h" />
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\clocks.h" />
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\core_profiler.h" />
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\function_meter.h" />
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\luaprofiler.h" />
+    <ClInclude Include="..\src_vc141\lua\luaprofiler_src\stack.h" />
+    <ClInclude Include="..\src_vc141\lua\MyLuaTimer.h" />
+    <ClInclude Include="..\src_vc141\lua\luna5.h" />
+    <ClInclude Include="..\src_vc141\lua\MyLua.h" />
+    <ClInclude Include="..\src_vc141\lua\MyLuaGlue.h" />
+    <ClInclude Include="..\src_vc141\lua\MyLuaTool.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\char_arrays.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\class_from_stack.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\default_trait_caller.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\dsl_va_args.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\lua_includes.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\lvd_types.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\lvd_type_traits.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_boilerplate.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_check_result.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_chunk.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_config.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_dsl.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_dsl_export.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_error.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_exception.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_function.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_helpers.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_open.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_pull.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_push.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_ref.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_registration.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_registration_fwd.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_script.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_stack.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_stack_dump.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_stack_fwd.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_string.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_table.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_traits.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_traits_fwd.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\oolua_version.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\platform_check.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_base_checker.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_caller.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_class.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_constructor.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_constructor_param_tester.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_function_dispatch.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_function_exports.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_member_function.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_none_member_function.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_operators.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_public_member.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_stack_helper.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_storage.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_tags.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_tag_info.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_test.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\proxy_userdata.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\push_pointer_internal.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\stack_get.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\typelist_structs.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\type_converters.h" />
+    <ClInclude Include="..\src_vc141\lua\oolua_src\type_list.h" />
+    <ClInclude Include="..\src_vc141\platform\asciiops.h" />
+    <ClInclude Include="..\src_vc141\platform\assemblerops.h" />
+    <ClInclude Include="..\src_vc141\platform\sys\queue.h" />
+    <ClInclude Include="..\src_vc141\platform\types.h" />
+    <ClInclude Include="..\src_vc141\platform\utilities.h" />
+    <ClInclude Include="..\src_vc141\queue\BlockingQueue.h" />
+    <ClInclude Include="..\src_vc141\queue\CamelConcurrentQueue.h" />
+    <ClInclude Include="..\src_vc141\queue\CamelBlockingConcurrentQueue.h" />
+    <ClInclude Include="..\src_vc141\queue\circle_queue.h" />
+    <ClInclude Include="..\src_vc141\queue\concurrent\blockingconcurrentqueue.h" />
+    <ClInclude Include="..\src_vc141\queue\concurrent\concurrentqueue.h" />
+    <ClInclude Include="..\src_vc141\queue\MessageQueue.h" />
+    <ClInclude Include="..\src_vc141\queue\MirrorBuffer.h" />
+    <ClInclude Include="..\src_vc141\queue\readerwriter\atomicops.h" />
+    <ClInclude Include="..\src_vc141\queue\readerwriter\readerwriterqueue.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\capnp\kj\async-inl.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\capnp\kj\async-io.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\capnp\kj\async.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\any.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\any.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\api.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\compiler\importer.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\compiler\parser.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor_database.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\duration.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\dynamic_message.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\empty.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\field_mask.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_reflection.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\gzip_stream.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\printer.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\strtod.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\tokenizer.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\zero_copy_stream_impl.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\map_field.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\message.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\reflection_ops.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\service.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\source_context.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\struct.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\mathlimits.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\substitute.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\text_format.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\timestamp.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\type.pb.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\unknown_field_set.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\delimited_message_util.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\field_comparator.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\field_mask_util.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\datapiece.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\default_value_objectwriter.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\error_listener.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\field_mask_utility.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_escaping.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_objectwriter.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_stream_parser.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\object_writer.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\protostream_objectsource.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\protostream_objectwriter.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\proto_writer.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\type_info.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\type_info_test_helper.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\utility.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\json_util.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\message_differencer.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\time_util.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\type_resolver_util.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wire_format.h" />
+    <ClInclude Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wrappers.pb.h" />
+    <ClInclude Include="..\src_vc141\UsingBase.h" />
+    <ClInclude Include="..\src_vc141\UsingCapnp.h" />
+    <ClInclude Include="..\src_vc141\UsingLua.h" />
+    <ClInclude Include="..\src_vc141\UsingMyToolkit.h" />
+    <ClInclude Include="..\src_vc141\UsingProtobuf.h" />
+    <ClInclude Include="..\src_vc141\utils\BadWordFilter.h" />
+    <ClInclude Include="..\src_vc141\utils\Base64Wrapper.h" />
+    <ClInclude Include="..\src_vc141\utils\CharCode.h" />
+    <ClInclude Include="..\src_vc141\utils\CpuMetrics.h" />
+    <ClInclude Include="..\src_vc141\utils\KVDict.h" />
+    <ClInclude Include="..\src_vc141\utils\NameCreator.h" />
+    <ClInclude Include="..\src_vc141\utils\CpuProfiler.h" />
+    <ClInclude Include="..\src_vc141\utils\StringHash.h" />
+    <ClInclude Include="..\src_vc141\utils\URLCode.h" />
+    <ClInclude Include="..\src_vc141\utils\MyUtil.h" />
+    <ClInclude Include="..\src_vc141\utils\WordTable.h" />
+    <ClInclude Include="..\src_vc141\xml\pugiconfig.hpp" />
+    <ClInclude Include="..\src_vc141\xml\pugixml.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\address_space_randomization.cc" />
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\page_allocator.cc" />
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_alloc.cc" />
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_bucket.cc" />
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_oom.cc" />
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_page.cc" />
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\partition_root_base.cc" />
+    <ClCompile Include="..\src_vc141\base\allocator\partition_allocator\spin_lock.cc" />
+    <ClCompile Include="..\src_vc141\base\big_endian.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\asan_invalid_access.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\close_handle_hook_win.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\crash_logging.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\gdi_debug_util_win.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\invalid_access_win.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\task_annotator.cc" />
+    <ClCompile Include="..\src_vc141\base\deferred_sequenced_task_runner.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_enumerator.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_enumerator_win.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_path.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_path_constants.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_path_watcher.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_path_watcher_win.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_proxy.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_tracing.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_util.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_util_win.cc" />
+    <ClCompile Include="..\src_vc141\base\files\file_win.cc" />
+    <ClCompile Include="..\src_vc141\base\files\important_file_writer.cc" />
+    <ClCompile Include="..\src_vc141\base\files\memory_mapped_file.cc" />
+    <ClCompile Include="..\src_vc141\base\files\memory_mapped_file_win.cc" />
+    <ClCompile Include="..\src_vc141\base\files\scoped_file.cc" />
+    <ClCompile Include="..\src_vc141\base\files\scoped_temp_dir.cc" />
+    <ClCompile Include="..\src_vc141\base\json\json_file_value_serializer.cc" />
+    <ClCompile Include="..\src_vc141\base\json\json_parser.cc" />
+    <ClCompile Include="..\src_vc141\base\json\json_reader.cc" />
+    <ClCompile Include="..\src_vc141\base\json\json_string_value_serializer.cc" />
+    <ClCompile Include="..\src_vc141\base\json\json_value_converter.cc" />
+    <ClCompile Include="..\src_vc141\base\json\json_writer.cc" />
+    <ClCompile Include="..\src_vc141\base\json\string_escape.cc" />
+    <ClCompile Include="..\src_vc141\base\lazy_instance_helpers.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\aligned_memory.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\discardable_memory.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\discardable_memory_allocator.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\discardable_shared_memory.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\platform_shared_memory_region.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\unsafe_shared_memory_region.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\writable_shared_memory_region.cc" />
+    <ClCompile Include="..\src_vc141\base\message_loop\message_loop_current.cc" />
+    <ClCompile Include="..\src_vc141\base\message_loop\pending_task_queue.cc" />
+    <ClCompile Include="..\src_vc141\base\native_library.cc" />
+    <ClCompile Include="..\src_vc141\base\observer_list_internal.cc" />
+    <ClCompile Include="..\src_vc141\base\observer_list_threadsafe.cc" />
+    <ClCompile Include="..\src_vc141\base\observer_list_types.cc" />
+    <ClCompile Include="..\src_vc141\base\power_monitor\power_monitor.cc" />
+    <ClCompile Include="..\src_vc141\base\power_monitor\power_monitor_device_source.cc" />
+    <ClCompile Include="..\src_vc141\base\power_monitor\power_monitor_device_source_win.cc" />
+    <ClCompile Include="..\src_vc141\base\power_monitor\power_monitor_source.cc" />
+    <ClCompile Include="..\src_vc141\base\process\process_info_win.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\latin1_string_conversions.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\nullable_string16.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\old_utf_string_conversions.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\pattern.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\safe_sprintf.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\strcat.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\stringprintf.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\string_number_conversions.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\string_piece.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\string_split.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\string_util.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\string_util_constants.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\sys_string_conversions_win.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\utf_offset_string_conversions.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\utf_string_conversions.cc" />
+    <ClCompile Include="..\src_vc141\base\strings\utf_string_conversion_utils.cc" />
+    <ClCompile Include="..\src_vc141\base\synchronization\atomic_flag.cc" />
+    <ClCompile Include="..\src_vc141\base\synchronization\condition_variable_win.cc" />
+    <ClCompile Include="..\src_vc141\base\synchronization\lock.cc" />
+    <ClCompile Include="..\src_vc141\base\synchronization\lock_impl_win.cc" />
+    <ClCompile Include="..\src_vc141\base\synchronization\waitable_event_watcher_win.cc" />
+    <ClCompile Include="..\src_vc141\base\synchronization\waitable_event_win.cc" />
+    <ClCompile Include="..\src_vc141\base\task\lazy_task_runner.cc" />
+    <ClCompile Include="..\src_vc141\base\task\post_task.cc" />
+    <ClCompile Include="..\src_vc141\base\task\scoped_set_task_priority_for_current_thread.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\enqueue_order.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\graceful_queue_shutdown_helper.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\lazy_now.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\real_time_domain.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\sequence_manager.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\sequence_manager_impl.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\task_queue.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\task_queue_impl.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\task_queue_selector.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\task_queue_task_runner.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\thread_controller_impl.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\thread_controller_with_message_pump_impl.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\time_domain.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\work_queue.cc" />
+    <ClCompile Include="..\src_vc141\base\task\sequence_manager\work_queue_sets.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_executor.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\delayed_task_manager.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\environment_config.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\initialization_util.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\platform_native_worker_pool_win.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\priority_queue.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_lock_impl.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_single_thread_task_runner_manager.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool_impl.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_pool_params.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\scheduler_worker_stack.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\sequence.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\sequence_sort_key.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\service_thread.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\task.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\task_scheduler.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\task_scheduler_impl.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_scheduler\task_tracker.cc" />
+    <ClCompile Include="..\src_vc141\base\task\task_traits.cc" />
+    <ClCompile Include="..\src_vc141\base\task\test_task_traits_extension.cc" />
+    <ClCompile Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det.cc" />
+    <ClCompile Include="..\src_vc141\base\third_party\ced\src\compact_enc_det\compact_enc_det_hint_code.cc" />
+    <ClCompile Include="..\src_vc141\base\third_party\dmg_fp\dtoa_wrapper.cc" />
+    <ClCompile Include="..\src_vc141\base\third_party\dmg_fp\g_fmt.cc" />
+    <ClCompile Include="..\src_vc141\base\third_party\dynamic_annotations\dynamic_annotations.c" />
+    <ClCompile Include="..\src_vc141\base\third_party\modp_b64\modp_b64.cc" />
+    <ClCompile Include="..\src_vc141\base\third_party\nspr\prtime.cc" />
+    <ClCompile Include="..\src_vc141\base\third_party\superfasthash\superfasthash.c" />
+    <ClCompile Include="..\src_vc141\base\threading\scoped_blocking_call.cc" />
+    <ClCompile Include="..\src_vc141\base\threading\sequence_local_storage_slot.cc" />
+    <ClCompile Include="..\src_vc141\base\threading\thread_collision_warner.cc" />
+    <ClCompile Include="..\src_vc141\base\threading\thread_restrictions.cc" />
+    <ClCompile Include="..\src_vc141\base\threading\watchdog.cc" />
+    <ClCompile Include="..\src_vc141\base\timer\elapsed_timer.cc" />
+    <ClCompile Include="..\src_vc141\base\timer\hi_res_timer_manager_win.cc" />
+    <ClCompile Include="..\src_vc141\base\time\time_override.cc" />
+    <ClCompile Include="..\src_vc141\base\unguessable_token.cc" />
+    <ClCompile Include="..\src_vc141\base\value_conversions.cc" />
+    <ClCompile Include="..\src_vc141\base\version.cc" />
+    <ClCompile Include="..\src_vc141\base\win\core_winrt_util.cc" />
+    <ClCompile Include="..\src_vc141\base\win\dllmain.cc" />
+    <ClCompile Include="..\src_vc141\base\win\enum_variant.cc" />
+    <ClCompile Include="..\src_vc141\base\win\i18n.cc" />
+    <ClCompile Include="..\src_vc141\base\win\iat_patch_function.cc" />
+    <ClCompile Include="..\src_vc141\base\win\iunknown_impl.cc" />
+    <ClCompile Include="..\src_vc141\base\win\process_startup_helper.cc" />
+    <ClCompile Include="..\src_vc141\base\win\scoped_bstr.cc" />
+    <ClCompile Include="..\src_vc141\base\win\scoped_com_initializer.cc" />
+    <ClCompile Include="..\src_vc141\base\win\scoped_handle_test_dll.cc" />
+    <ClCompile Include="..\src_vc141\base\win\scoped_handle_verifier.cc" />
+    <ClCompile Include="..\src_vc141\base\win\scoped_hstring.cc" />
+    <ClCompile Include="..\src_vc141\base\win\scoped_variant.cc" />
+    <ClCompile Include="..\src_vc141\base\win\scoped_winrt_initializer.cc" />
+    <ClCompile Include="..\src_vc141\base\win\shortcut.cc" />
+    <ClCompile Include="..\src_vc141\base\win\vector.cc" />
+    <ClCompile Include="..\src_vc141\base\win\wait_chain.cc" />
+    <ClCompile Include="..\src_vc141\base\win\winrt_storage_util.cc" />
+    <ClCompile Include="..\src_vc141\base\win\win_util.cc" />
+    <ClCompile Include="..\src_vc141\core\Heartbeat.cpp" />
+    <ClCompile Include="..\src_vc141\lua\ringbuffer.c" />
+    <ClCompile Include="..\src_vc141\lua\tolua_event.c" />
+    <ClCompile Include="..\src_vc141\lua\tolua_fix.c" />
+    <ClCompile Include="..\src_vc141\lua\tolua_is.c" />
+    <ClCompile Include="..\src_vc141\lua\tolua_map.c" />
+    <ClCompile Include="..\src_vc141\lua\tolua_push.c" />
+    <ClCompile Include="..\src_vc141\lua\tolua_to.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\client_info.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\crash_generation_client.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\crash_generation_server.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\crash_generation\minidump_generator.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\handler\exception_handler.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\client\windows\sender\crash_report_sender.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\guid_string.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\http_upload.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\breakpad\src\common\windows\string_utils.cc" />
+    <ClCompile Include="..\src_vc141\base\at_exit.cc" />
+    <ClCompile Include="..\src_vc141\base\clear_at_exit.cc" />
+    <ClCompile Include="..\src_vc141\base\base64.cc" />
+    <ClCompile Include="..\src_vc141\base\base_paths.cc" />
+    <ClCompile Include="..\src_vc141\base\base_paths_win.cc" />
+    <ClCompile Include="..\src_vc141\base\base_switches.cc" />
+    <ClCompile Include="..\src_vc141\base\callback_helpers.cc" />
+    <ClCompile Include="..\src_vc141\base\callback_internal.cc" />
+    <ClCompile Include="..\src_vc141\base\command_line.cc" />
+    <ClCompile Include="..\src_vc141\base\cpu.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\alias.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\debugger.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\debugger_win.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\dump_without_crashing.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\profiler.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\stack_trace.cc" />
+    <ClCompile Include="..\src_vc141\base\debug\stack_trace_win.cc" />
+    <ClCompile Include="..\src_vc141\base\environment.cc" />
+    <ClCompile Include="..\src_vc141\base\file_version_info_win.cc" />
+    <ClCompile Include="..\src_vc141\base\guid.cc" />
+    <ClCompile Include="..\src_vc141\base\hash.cc" />
+    <ClCompile Include="..\src_vc141\base\location.cc" />
+    <ClCompile Include="..\src_vc141\base\logging.cc" />
+    <ClCompile Include="..\src_vc141\base\md5.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\ref_counted.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\ref_counted_memory.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\shared_memory_handle.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\shared_memory_handle_win.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\shared_memory_win.cc" />
+    <ClCompile Include="..\src_vc141\base\memory\weak_ptr.cc" />
+    <ClCompile Include="..\src_vc141\base\message_loop\message_loop.cc" />
+    <ClCompile Include="..\src_vc141\base\message_loop\message_loop_task_runner.cc" />
+    <ClCompile Include="..\src_vc141\base\message_loop\message_pump.cc" />
+    <ClCompile Include="..\src_vc141\base\message_loop\message_pump_default.cc" />
+    <ClCompile Include="..\src_vc141\base\message_loop\message_pump_win.cc" />
+    <ClCompile Include="..\src_vc141\base\path_service.cc" />
+    <ClCompile Include="..\src_vc141\base\pending_task.cc" />
+    <ClCompile Include="..\src_vc141\base\pickle.cc" />
+    <ClCompile Include="..\src_vc141\base\process\kill.cc" />
+    <ClCompile Include="..\src_vc141\base\process\kill_win.cc" />
+    <ClCompile Include="..\src_vc141\base\process\launch.cc" />
+    <ClCompile Include="..\src_vc141\base\process\launch_win.cc" />
+    <ClCompile Include="..\src_vc141\base\process\_chromium_base_process_memory.cc" />
+    <ClCompile Include="..\src_vc141\base\process\memory_win.cc" />
+    <ClCompile Include="..\src_vc141\base\process\process_handle_win.cc" />
+    <ClCompile Include="..\src_vc141\base\process\process_iterator.cc" />
+    <ClCompile Include="..\src_vc141\base\process\process_iterator_win.cc" />
+    <ClCompile Include="..\src_vc141\base\process\process_metrics.cc" />
+    <ClCompile Include="..\src_vc141\base\process\process_metrics_win.cc" />
+    <ClCompile Include="..\src_vc141\base\process\process_win.cc" />
+    <ClCompile Include="..\src_vc141\base\rand_util.cc" />
+    <ClCompile Include="..\src_vc141\base\rand_util_win.cc" />
+    <ClCompile Include="..\src_vc141\base\run_loop.cc" />
+    <ClCompile Include="..\src_vc141\base\sequenced_task_runner.cc" />
+    <ClCompile Include="..\src_vc141\base\sequence_checker_impl.cc" />
+    <ClCompile Include="..\src_vc141\base\sequence_token.cc" />
+    <ClCompile Include="..\src_vc141\base\sha1.cc" />
+    <ClCompile Include="..\src_vc141\base\sys_info.cc" />
+    <ClCompile Include="..\src_vc141\base\sys_info_win.cc" />
+    <ClCompile Include="..\src_vc141\base\task_runner.cc" />
+    <ClCompile Include="..\src_vc141\base\third_party\icu\icu_utf.cc" />
+    <ClCompile Include="..\src_vc141\base\threading\platform_thread_win.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\post_task_and_reply_impl.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\sequenced_task_runner_handle.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\sequence_local_storage_map.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\simple_thread.cc" />
+    <ClCompile Include="..\src_vc141\base\threading\thread.cc" />
+    <ClCompile Include="..\src_vc141\base\threading\thread_checker_impl.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_id_name_manager.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_local_storage.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_local_storage_win.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\threading\thread_task_runner_handle.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\base\timer\timer.cc" />
+    <ClCompile Include="..\src_vc141\base\time\clock.cc" />
+    <ClCompile Include="..\src_vc141\base\time\default_clock.cc" />
+    <ClCompile Include="..\src_vc141\base\time\default_tick_clock.cc" />
+    <ClCompile Include="..\src_vc141\base\time\tick_clock.cc" />
+    <ClCompile Include="..\src_vc141\base\time\time.cc" />
+    <ClCompile Include="..\src_vc141\base\time\time_win.cc" />
+    <ClCompile Include="..\src_vc141\base\values.cc" />
+    <ClCompile Include="..\src_vc141\base\value_iterators.cc" />
+    <ClCompile Include="..\src_vc141\base\vlog.cc" />
+    <ClCompile Include="..\src_vc141\base\win\com_init_check_hook.cc" />
+    <ClCompile Include="..\src_vc141\base\win\com_init_util.cc" />
+    <ClCompile Include="..\src_vc141\base\win\message_window.cc" />
+    <ClCompile Include="..\src_vc141\base\win\object_watcher.cc" />
+    <ClCompile Include="..\src_vc141\base\win\patch_util.cc" />
+    <ClCompile Include="..\src_vc141\base\win\pe_image.cc" />
+    <ClCompile Include="..\src_vc141\base\win\registry.cc" />
+    <ClCompile Include="..\src_vc141\base\win\resource_util.cc" />
+    <ClCompile Include="..\src_vc141\base\win\scoped_handle.cc" />
+    <ClCompile Include="..\src_vc141\base\win\scoped_process_information.cc" />
+    <ClCompile Include="..\src_vc141\base\win\startup_information.cc" />
+    <ClCompile Include="..\src_vc141\base\win\windows_version.cc" />
+    <ClCompile Include="..\src_vc141\base\win\wrapped_window_proc.cc" />
+    <ClCompile Include="..\src_vc141\cc_container\ObjectPool.cpp" />
+    <ClCompile Include="..\src_vc141\cc_container\SortedVector.cpp" />
+    <ClCompile Include="..\src_vc141\cc_container\test_allocator.cpp" />
+    <ClCompile Include="..\src_vc141\cipher\crc16.c" />
+    <ClCompile Include="..\src_vc141\cipher\MD5Wrapper.cpp" />
+    <ClCompile Include="..\src_vc141\cipher\TEA.cpp" />
+    <ClCompile Include="..\src_vc141\cipher\tinyaes\aes128.c" />
+    <ClCompile Include="..\src_vc141\cityhash\city.cc" />
+    <ClCompile Include="..\src_vc141\core\bip_buf.c" />
+    <ClCompile Include="..\src_vc141\core\BitFlag.cpp" />
+    <ClCompile Include="..\src_vc141\core\bit_flag.c" />
+    <ClCompile Include="..\src_vc141\core\BufferFile.cpp" />
+    <ClCompile Include="..\src_vc141\core\EventDispatcher.cpp" />
+    <ClCompile Include="..\src_vc141\core\FileAnsi.cpp" />
+    <ClCompile Include="..\src_vc141\core\kj\KjSimpleEventLoop.cpp" />
+    <ClCompile Include="..\src_vc141\core\kj\KjSimpleIoContext.cpp" />
+    <ClCompile Include="..\src_vc141\core\LRandom.cpp" />
+    <ClCompile Include="..\src_vc141\core\SimpleCalendar.cpp" />
+    <ClCompile Include="..\src_vc141\core\simple_buf_alloc.c" />
+    <ClCompile Include="..\src_vc141\core\snprintf\fast_memcpy.c" />
+    <ClCompile Include="..\src_vc141\core\snprintf\mysnprintf.c" />
+    <ClCompile Include="..\src_vc141\core\TickedEvent.cpp" />
+    <ClCompile Include="..\src_vc141\core\TimeSlicer.cpp" />
+    <ClCompile Include="..\src_vc141\core\TimeSlicerBase.cpp" />
+    <ClCompile Include="..\src_vc141\core\TimeTickerAbs.cpp" />
+    <ClCompile Include="..\src_vc141\core\TimeTicker.cpp" />
+    <ClCompile Include="..\src_vc141\core\TimeoutEventHub.cpp" />
+    <ClCompile Include="..\src_vc141\core\timingwheel\timeout\test-timeout.c" />
+    <ClCompile Include="..\src_vc141\core\timingwheel\timeout\timeout-bitops.c" />
+    <ClCompile Include="..\src_vc141\core\timingwheel\timeout\timeout.c" />
+    <ClCompile Include="..\src_vc141\crash_reporter\crash_reporter.cc" />
+    <ClCompile Include="..\src_vc141\crash_reporter\crash_reporter_in_process_win.cc" />
+    <ClCompile Include="..\src_vc141\crash_reporter\crash_reporter_win.cc" />
+    <ClCompile Include="..\src_vc141\crash_reporter\win\crash_service.cc" />
+    <ClCompile Include="..\src_vc141\crash_reporter\win\crash_service_main.cc" />
+    <ClCompile Include="..\src_vc141\c_container\cparray.c" />
+    <ClCompile Include="..\src_vc141\framework\ConfigHub.cpp" />
+    <ClCompile Include="..\src_vc141\framework\Cooldown.cpp" />
+    <ClCompile Include="..\src_vc141\framework\DealingGuard.cpp" />
+    <ClCompile Include="..\src_vc141\framework\FifoTaskQueue.cpp" />
+    <ClCompile Include="..\src_vc141\framework\HandlerHub.cpp" />
+    <ClCompile Include="..\src_vc141\framework\ProtobufArenaHelper.cpp" />
+    <ClCompile Include="..\src_vc141\framework\ProtobufImporter.cpp" />
+    <ClCompile Include="..\src_vc141\json\cJSON.c" />
+    <ClCompile Include="..\src_vc141\log\StdChromiumLog.cpp" />
+    <ClCompile Include="..\src_vc141\log\StdPanLog.cpp" />
+    <ClCompile Include="..\src_vc141\lua\lbind.c" />
+    <ClCompile Include="..\src_vc141\lua\lbind_test.c" />
+    <ClCompile Include="..\src_vc141\lua\lfs.c" />
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\clocks.c" />
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\core_profiler.c" />
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\function_meter.c" />
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\lua50_profiler.c" />
+    <ClCompile Include="..\src_vc141\lua\luaprofiler_src\stack.c" />
+    <ClCompile Include="..\src_vc141\lua\MyLuaGlue.cpp" />
+    <ClCompile Include="..\src_vc141\lua\MyLuaTimer.cpp" />
+    <ClCompile Include="..\src_vc141\lua\MyLua.cpp" />
+    <ClCompile Include="..\src_vc141\lua\MyLuaTtest.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\class_from_stack.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_check_result.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_chunk.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_error.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_exception.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_function.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_helpers.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_open.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_pull.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_push.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_ref.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_registration.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_script.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_stack_dump.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_string.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\oolua_table.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\proxy_storage.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\push_pointer_internal.cpp" />
+    <ClCompile Include="..\src_vc141\lua\oolua_src\stack_get.cpp" />
+    <ClCompile Include="..\src_vc141\platform\asciiops.c" />
+    <ClCompile Include="..\src_vc141\platform\utilities.c" />
+    <ClCompile Include="..\src_vc141\queue\BlockingQueue.cpp" />
+    <ClCompile Include="..\src_vc141\queue\CamelConcurrentQueue.cpp" />
+    <ClCompile Include="..\src_vc141\queue\CamelBlockingConcurrentQueue.cpp" />
+    <ClCompile Include="..\src_vc141\queue\circle_queue.c" />
+    <ClCompile Include="..\src_vc141\queue\MessageQueue.cpp" />
+    <ClCompile Include="..\src_vc141\queue\MirrorBuffer.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\arena.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\array.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\async-io-win32.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\async-io.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\async-win32.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\async.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\common.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\debug.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\encoding.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\exception.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\filesystem-disk-win32.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\filesystem.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_hash.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\io.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\main.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_memory.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\mutex.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\refcount.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\string-tree.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\string.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\table.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_thread.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_time.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\_kj_timer.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\capnp\kj\units.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\any.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\any.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\api.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\_pb_arena.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\_pb_arenastring.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\compiler\importer.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\compiler\parser.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\descriptor_database.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\duration.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\dynamic_message.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\empty.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\extension_set.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\extension_set_heavy.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\field_mask.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_reflection.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_table_driven.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_table_driven_lite.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\generated_message_util.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\implicit_weak_message.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\coded_stream.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\gzip_stream.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\printer.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\strtod.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\tokenizer.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\zero_copy_stream.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\zero_copy_stream_impl.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\io\zero_copy_stream_impl_lite.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\map_field.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\message.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\message_lite.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\reflection_ops.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\repeated_field.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\service.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\source_context.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\struct.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\bytestream.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\_pb_common.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\int128.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\io_win32.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\mathlimits.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\status.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\statusor.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\_pb_stringpiece.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\_pb_stringprintf.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\structurally_valid.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\strutil.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\substitute.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\stubs\_pb_time.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\text_format.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\timestamp.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\type.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\unknown_field_set.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\delimited_message_util.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\field_comparator.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\field_mask_util.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\datapiece.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\default_value_objectwriter.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\error_listener.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\field_mask_utility.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_escaping.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_objectwriter.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\json_stream_parser.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\object_writer.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\protostream_objectsource.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\protostream_objectwriter.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\proto_writer.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\type_info.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\type_info_test_helper.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\internal\utility.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\json_util.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\message_differencer.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\_pb_time_util.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\util\type_resolver_util.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wire_format.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wire_format_lite.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\g\protobuf\src\google\protobuf\wrappers.pb.cc" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\backends\be.N.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\backends\bec.file.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\backends\bec.fprintf.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\api.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\api.deprecated.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\api.exitprocess.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\api.logputs.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\auto.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\core\logprintf.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\frontends\fe.N.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\args.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\b64.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\blob.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\boolean.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\_pan_exception.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\hostid.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\integer.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\interval.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\m2w.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\pointer.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\processid.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\real.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\slice.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\stream_character.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\inserters\threadid.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\bailout.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\be.context.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\be.parse.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\core.apidefs.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\date_elements_to_string.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\hostname.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\init_code_strings.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\severity_strings.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\snprintf.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\strdup.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\strnlen.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\_pan_time.cpp" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\util.processid.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\util.strnlen.c" />
+    <ClCompile Include="..\src_vc141\thirdparty\stlsoft\pantheios\src\util\util.threadid.c" />
+    <ClCompile Include="..\src_vc141\utils\BadWordFilter.cpp" />
+    <ClCompile Include="..\src_vc141\utils\Base64Wrapper.cpp" />
+    <ClCompile Include="..\src_vc141\utils\CharCode.cpp" />
+    <ClCompile Include="..\src_vc141\utils\CpuMetrics.cpp" />
+    <ClCompile Include="..\src_vc141\utils\KVDict.cpp" />
+    <ClCompile Include="..\src_vc141\utils\NameCreator.cpp" />
+    <ClCompile Include="..\src_vc141\utils\CpuProfiler.cpp" />
+    <ClCompile Include="..\src_vc141\utils\StringHash.cpp" />
+    <ClCompile Include="..\src_vc141\utils\URLCode.cpp" />
+    <ClCompile Include="..\src_vc141\utils\MyUtil.cpp" />
+    <ClCompile Include="..\src_vc141\utils\WordTable.cpp" />
+    <ClCompile Include="..\src_vc141\xml\pugixml.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="mytoolkit.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

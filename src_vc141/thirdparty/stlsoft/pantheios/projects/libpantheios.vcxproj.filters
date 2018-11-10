@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d09d2611-56ab-4532-9da7-a404d9fe7cb5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{9b29fd57-eb15-4327-8093-ee1a7bd527f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\inserters">
+      <UniqueIdentifier>{1e04b109-4f7f-4f9a-8ee9-5d7862a21cdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\util">
+      <UniqueIdentifier>{1f0b71f7-c1cc-48fe-ba17-cc3e9b02931c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\backends">
+      <UniqueIdentifier>{a050c50c-5160-4b0f-94c9-22dc58dfc7c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\frontends">
+      <UniqueIdentifier>{18673175-75ec-4503-8431-a8937786c9b4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\core\api.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\api.deprecated.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\api.exitprocess.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\api.logputs.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\auto.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\logprintf.c">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\args.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\b64.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\blob.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\boolean.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\hostid.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\integer.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\interval.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\m2w.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\pointer.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\processid.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\real.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\slice.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\stream_character.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\threadid.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\w2m.cpp">
+      <Filter>src\inserters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\inserters\exception.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\bailout.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\be.context.cpp">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\be.parse.cpp">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\core.apidefs.cpp">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\date_elements_to_string.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\hostname.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\init_code_strings.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\severity_strings.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\snprintf.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\strdup.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\strnlen.cpp">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\time.cpp">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\util.strnlen.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\backends\bec.fprintf.cpp">
+      <Filter>src\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\backends\bec.file.cpp">
+      <Filter>src\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\backends\be.N.c">
+      <Filter>src\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\util.threadid.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\util.processid.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\frontends\fe.N.c">
+      <Filter>src\frontends</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
