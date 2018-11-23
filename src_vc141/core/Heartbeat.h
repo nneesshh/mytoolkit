@@ -93,22 +93,19 @@ private:
 	CSimpleTimer& _refTimer; // singleton can't cross dll (so), so we must keep the timer reference
 	StdLog& _refLog;
 
-	int _correctionOffsetInMs = 0;
-	char _nowformat[32];
-	struct stats_t _stats;
-
 	std::function<void(unsigned int, uint64_t)> _cbUpdate;
 	volatile sig_atomic_t _quit = 0;
 
-	kj::Own<KjSimpleEventLoop> _context;
-	kj::Own<kj::TaskSet> _tsHeartbeat;
-	kj::Own<kj::TaskSet> _tsDaemon;
-
-	bool _heartbeatRunnable = false;
+	kj::Own<KjSimpleEventLoop> _context = kj::refcounted<KjSimpleEventLoop>();
+	kj::Own<kj::TaskSet> _tsHeartbeat = _context->CreateTaskSet();
+	kj::Own<kj::TaskSet> _tsDaemon = _context->CreateTaskSet();
 
 	unsigned int _statsOutputIntervalInMs = 0;
-	int64_t _base_diff_in_ms = 0;
-	int _diff_offset_in_ms = 0;
+	int64_t _baseDiffInMs = 0;
+	int _diffOffsetInMs = 0;
+	int _correctionOffsetInMs = 0;
+	char _nowformat[32];
+	struct stats_t _stats;
 
 	int _lastRecvBytes = 0;
 	int _lastSendBytes = 0;

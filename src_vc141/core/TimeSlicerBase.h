@@ -1,9 +1,9 @@
 #pragma once
 //------------------------------------------------------------------------------
 /**
-	@class CTimeSlicerBase
+@class CTimeSlicerBase
 
-	(C) 2016 n.lee
+(C) 2016 n.lee
 */
 #include "IHeartbeat.h"
 #include "TimeoutEventHub.h"
@@ -22,21 +22,48 @@ class CTimeSlicerOp;
 */
 class CTimeSliceFormatBase : public ITimeSliceFormat {
 public:
-	CTimeSliceFormatBase(CSimpleCalendar *pCalendar) : _refCalendar(pCalendar) { }
+	CTimeSliceFormatBase() { }
 	virtual ~CTimeSliceFormatBase() { };
 
-	CSimpleCalendar *_refCalendar;
 	TIME_SLICE_LIST _vSlice;
 
-	virtual time_slice_t *		AddFormat(const char *sBeginTime, int nPeriod = -1);
-	virtual time_slice_t *		AddFormat(const char *sBeginTime, const char *sEndTime);
+	virtual time_slice_t *		AddFormat(const char *sBeginTime, int nPeriod = -1) override;
+	virtual time_slice_t *		AddFormat(const char *sBeginTime, const char *sEndTime) override;
+	virtual void				AdjustSliceEndTime() override;
 
-public:
-	static bool					IsBetweenPeriod(const time_t tmDaypoint, uint64_t uBase, unsigned int uBeginTime, unsigned int uEndTime) {
-		return (time_t)(uBase + uBeginTime) <= tmDaypoint
-			&& tmDaypoint < (time_t)(uBase + uEndTime);
+	virtual int					GetSliceSize() const override {
+		return (int)_vSlice.size();
 	}
 
+	virtual const time_slice_t *	GetSliceAt(unsigned int uSlicePointer) const override {
+		if (uSlicePointer > 0 && uSlicePointer <= _vSlice.size()) {
+			return &_vSlice[uSlicePointer - 1];
+		}
+		return nullptr;
+	}
+
+	virtual const time_slice_t *	GetSliceByTime(time_t tmCheck) const override;
+
+	virtual time_t				GetSliceBeginTime(const time_slice_t *slice, time_t tmCheck) const override;
+	virtual time_t				GetSliceEndTime(const time_slice_t *slice, time_t tmCheck) const override;
+
+	virtual unsigned int		FindSlicePointerByTime(const time_t tmCheck, time_slicer_cycle_t& outCycle) const override;
+	virtual unsigned int		NextSlicePointer(const unsigned int uSlicePointer, time_slicer_cycle_t& inOutCycle) const override;
+
+	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice, time_t tmNow) const override {
+		return GetSliceBeginTime(slice, tmNow) <= tmCheck
+			&& tmCheck < GetSliceEndTime(slice, tmNow);
+	}
+
+public:
+	static unsigned int			GetValidFormatEndTime(const time_slice_t *slice, const unsigned int TIME_MAX) {
+		return (0 == slice->_end_time) ? TIME_MAX : slice->_end_time;
+	}
+
+	static bool					IsBetweenPeriod(const time_t tmCheck, time_t tmBase, unsigned int uBeginTime, unsigned int uEndTime) {
+		return (time_t)(tmBase + uBeginTime) <= tmCheck
+			&& tmCheck < (time_t)(tmBase + uEndTime);
+	}
 };
 
 //------------------------------------------------------------------------------
@@ -45,55 +72,40 @@ public:
 */
 class CTimeSlicerBase : public ITimeSlicer {
 public:
-	CTimeSlicerBase(const char *sName, CTimeoutEventHub *pEventHub, IHeartbeat *pHeartbeat, CTimeSliceFormatBase *pFormat);
+	CTimeSlicerBase(const char *sName, CTimeoutEventHub *pEventHub, IHeartbeat *pHeartbeat, const CTimeSliceFormatBase *pFormat);
 	virtual ~CTimeSlicerBase();
 
-	virtual void				StartTick(ON_TIME_SLICER_TIMEOUT onBegin, ON_TIME_SLICER_TIMEOUT onEnd);
-	virtual void				StopTick();
+	virtual void				StartTick(ON_TIME_SLICER_TIMEOUT onBegin, ON_TIME_SLICER_TIMEOUT onEnd) override;
+	virtual void				StopTick() override;
 
-	virtual bool				IsTicking() {
+	virtual bool				IsTicking() const override {
 		return (nullptr != _timer);
 	}
 
-	virtual void				AllocTimeSlicePointerByTime(const time_t tmDaypoint, time_slicer_cycle_t& outCycle, unsigned int& uOutSlicePointer);
-	virtual void				AllocNextSlicePointer(time_slicer_cycle_t& outCycle, unsigned int& uOutSlicePointer);
-
-	virtual time_slice_t *		GetSliceByTimeInMs(uint64_t uNowInMs);
-
-	virtual time_slice_t *		GetNowSlice() {
-		uint64_t uNowInMs = _refHeartbeat->GetTimer().GetNowSystemTimeInMs();
-		return GetSliceByTimeInMs(uNowInMs);
-	}
-	
-	virtual int					GetSliceSize() {
-		return (int)_refFormat->_vSlice.size();
+	virtual const ITimeSliceFormat *	GetSliceFormat() const override {
+		return _refFormat;
 	}
 
-	virtual time_slice_t *		GetSliceAt(unsigned int uSlicePointer) {
-		if (uSlicePointer > 0 && uSlicePointer <= _refFormat->_vSlice.size()) {
-			return &_refFormat->_vSlice[uSlicePointer - 1];
-		}
-		return nullptr;
+	virtual const time_slice_t *	GetNowSlice() const override {
+		time_t tmNow = _refHeartbeat->GetTimer().GetNowSystemTime();
+		return GetSliceByTime(tmNow);
 	}
 
-	virtual time_t				GetSliceBeginTime(time_slice_t *slice);
-	virtual time_t				GetSliceEndTime(time_slice_t *slice);
+	virtual const time_slice_t *	GetSliceByTime(time_t tmCheck) const override;
 
-	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, time_slice_t *slice) {
+	virtual time_t				GetSliceBeginTime(const time_slice_t *slice) const override;
+	virtual time_t				GetSliceEndTime(const time_slice_t *slice) const override;
+
+	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice) const override {
 		return GetSliceBeginTime(slice) <= tmCheck
 			&& tmCheck < GetSliceEndTime(slice);
-	}
-
-	virtual bool				IsTimeInMsInSlicePeriod(uint64_t uNowInMs, time_slice_t *slice) {
-		return (uint64_t)1000 * GetSliceBeginTime(slice) <= uNowInMs
-			&& uNowInMs < (uint64_t)1000 * GetSliceEndTime(slice);
 	}
 
 public:
 	std::string _sName;
 	CTimeoutEventHub *_refEventHub;
 	IHeartbeat *_refHeartbeat;
-	CTimeSliceFormatBase *_refFormat;
+	const CTimeSliceFormatBase *_refFormat;
 
 	CTimeSlicerOp *_timer = nullptr;
 };

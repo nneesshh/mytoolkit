@@ -77,10 +77,7 @@ using namespace  MyToolkit;
 CHeartbeat::CHeartbeat(const std::string& appname, CSimpleTimer& timer, StdLog& log)
 	: _appname(appname)
 	, _refTimer(timer)
-	, _refLog(log)
-	, _context(kj::refcounted<KjSimpleEventLoop>())
-	, _tsHeartbeat(_context->CreateTaskSet())
-	, _tsDaemon(_context->CreateTaskSet()) {
+	, _refLog(log) {
 	//
 	_nowformat[0] = '\0';
 
@@ -143,18 +140,18 @@ CHeartbeat::OnStats(int nConnectionCount, int nAccountCount, int nRecvBytes, int
 
 		//
 		int64_t nDiffInMs = now_system_time_in_ms - nTotalElapsedInMs;
-		if (_base_diff_in_ms <= 0) {
-			_base_diff_in_ms = nDiffInMs;
+		if (_baseDiffInMs <= 0) {
+			_baseDiffInMs = nDiffInMs;
 		}
-		_diff_offset_in_ms = (int)(nDiffInMs - _base_diff_in_ms) - _correctionOffsetInMs;
+		_diffOffsetInMs = (int)(nDiffInMs - _baseDiffInMs) - _correctionOffsetInMs;
 
 		//
-		if (0 != _diff_offset_in_ms
-			&& (_diff_offset_in_ms > 1000
-				|| _diff_offset_in_ms < -1000)) {
+		if (0 != _diffOffsetInMs
+			&& (_diffOffsetInMs > 1000
+				|| _diffOffsetInMs < -1000)) {
 			// warning
-			_refLog.logprint(LOG_LEVEL_WARNING, "[CHeartbeat::OnStats()] time jump found: offset=%d(ms)", _diff_offset_in_ms);
-			TimeCorrection(_diff_offset_in_ms);
+			_refLog.logprint(LOG_LEVEL_WARNING, "[CHeartbeat::OnStats()] time jump found: offset=%d(ms)", _diffOffsetInMs);
+			TimeCorrection(_diffOffsetInMs);
 		}
 
 		//
@@ -162,7 +159,7 @@ CHeartbeat::OnStats(int nConnectionCount, int nAccountCount, int nRecvBytes, int
 		fprintf(stdout, "\n[CHeartbeat::OnStats()][%s]", _appname.c_str());
 		fprintf(stdout, "\n________[pid(%d)] [%04d:%02d:%02d][%03d] %s:%03d *%d/%d",
 			base::GetCurrentProcId(),
-			nHours, nMinutes, nSeconds, nSecondsLeft, _nowformat, now_time_t_left, _diff_offset_in_ms, _correctionOffsetInMs);
+			nHours, nMinutes, nSeconds, nSecondsLeft, _nowformat, now_time_t_left, _diffOffsetInMs, _correctionOffsetInMs);
 		fprintf(stdout, "\n________[tid(%d)] FPS=(%.1f), Elapsed=(%d), Sleep=(%d), Capacity=c(%d)_a(%d)...R<%.1f>/S<%.1f>\n\n",
 			base::PlatformThread::CurrentId(),
 			_stats._fps,
@@ -271,10 +268,10 @@ CHeartbeat::Daemon() {
 	// daemon delay
 	return AfterDelay(DAEMON_INTERVAL)
 		.then([this]() {
-		// log info to file only
-		std::string trace_txt = _tsHeartbeat->trace().cStr();
-		_refLog.logprint(LOG_LEVEL_INFO, "\n[CHeartbeat::Daemon()] task_set(0x%08Ix), tasks:\n%s\n",
-			(uintptr_t)_tsHeartbeat.get(), trace_txt.c_str());
+		// log info to file
+		_refLog.logprint(LOG_LEVEL_INFO, "\n[CHeartbeat::Daemon()] heartbeat_taskset(0x%08Ix)interval_ms(%d) -- daemon_taskset(0x%08Ix)interval(%d)\n",
+			(uintptr_t)_tsHeartbeat.get(), HEARTBEAT_FRAME_TIME_IN_MS,
+			(uintptr_t)_tsDaemon.get(), DAEMON_INTERVAL);
 
 		uint64_t uNowInMs = _refTimer.GetNowSystemTimeInMs();
 		uint64_t uStatsNowInMs = StatsNowSystemTimeInMs();
@@ -282,7 +279,8 @@ CHeartbeat::Daemon() {
 
 		// force to dump and crash for about 5 minute
 		if (uDiff > DAEMON_CRASH_TIMEOUT * 1000) {
-			_refLog.logprint(LOG_LEVEL_ALERT, "\n[CHeartbeat::Daemon()] heartbeat maybe crashed!!!! task_set(0x%08Ix), tasks:\n%s\n",
+			std::string trace_txt = _tsHeartbeat->trace().cStr();
+			_refLog.logprint(LOG_LEVEL_ALERT, "\n[CHeartbeat::Daemon()] heartbeat maybe crashed!!!! heartbeat_taskset(0x%08Ix), tasks:\n%s\n",
 				(uintptr_t)_tsHeartbeat.get(), trace_txt.c_str());
 
 			write_heartbeat_crash_error(_appname.c_str(), trace_txt.c_str());

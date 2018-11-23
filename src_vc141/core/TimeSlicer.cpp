@@ -17,24 +17,24 @@
 /**
 
 */
-bool
-CTimeSliceFormatDaily::AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t& outCycle) {
-	bool bSuccess = false;
-	time_t tmDay = CSimpleCalendar::DatetimeToDate(tmDaypoint);
+void
+CTimeSliceFormatDaily::ResetCycle(const time_t tmCheck, time_slicer_cycle_t& outCycle) const {
+	time_t tmDay = CSimpleCalendar::DatetimeToDate(tmCheck);
 	const unsigned int CYCLE_TIME = DAY_SECONDS;
 
 	//
 	time_t tmBase = tmDay;
 	unsigned int uTimeMin = CYCLE_TIME;
 	unsigned int uTimeMax = 0;
+	unsigned int uEndTime = 0;
+
 	// check time slice min and slice max
 	for (auto& slice : _vSlice) {
-		if (slice._use_cycle_end) {
-			slice._end_time = slice._begin_time + CYCLE_TIME;
-		}
+		// valid format end time
+		uEndTime = CTimeSliceFormatBase::GetValidFormatEndTime(&slice, CYCLE_TIME);
 
 		uTimeMin = (slice._begin_time < uTimeMin) ? slice._begin_time : uTimeMin;
-		uTimeMax = (slice._end_time > uTimeMax) ? slice._end_time : uTimeMax;
+		uTimeMax = (uEndTime > uTimeMax) ? uEndTime : uTimeMax;
 	}
 
 	// adjust bound
@@ -48,45 +48,27 @@ CTimeSliceFormatDaily::AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t& 
 	}
 	
 	//
-	if (IsBetweenPeriod(tmDaypoint, (uint64_t)(tmBase), uTimeMin, uTimeMax)) {
+	if (IsBetweenPeriod(tmCheck, tmBase, uTimeMin, uTimeMax)) {
 		outCycle._base = tmBase;
 		outCycle._timemin = uTimeMin;
 		outCycle._timemax = uTimeMax;
-		bSuccess = true;
+		return;
 	}
-	else {
-		// check pre
-		tmBase -= CYCLE_TIME;
-		if (IsBetweenPeriod(tmDaypoint, (uint64_t)(tmBase), uTimeMin, uTimeMax)) {
-			outCycle._base = tmBase;
-			outCycle._timemin = uTimeMin;
-			outCycle._timemax = uTimeMax;
-			bSuccess = true;
-		}
-	}
-	return bSuccess;
+
+	// use pre
+	tmBase -= CYCLE_TIME;
+	outCycle._base = tmBase;
+	outCycle._timemin = uTimeMin;
+	outCycle._timemax = uTimeMax;
 }
 
 //------------------------------------------------------------------------------
 /**
 
 */
-bool
-CTimeSliceFormatDaily::AllocNextCycle(const time_slicer_cycle_t& cycle, time_slicer_cycle_t& outNextCycle) {
-	const unsigned int CYCLE_TIME = DAY_SECONDS;
-	outNextCycle = cycle;
-	outNextCycle._base += CYCLE_TIME;
-	return true;
-}
-
-//------------------------------------------------------------------------------
-/**
-
-*/
-bool
-CTimeSliceFormatWeekly::AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t& outCycle) {
-	bool bSuccess = false;
-	time_t tmWeekDay = CSimpleCalendar::WeekDay(tmDaypoint);
+void
+CTimeSliceFormatWeekly::ResetCycle(const time_t tmCheck, time_slicer_cycle_t& outCycle) const {
+	time_t tmWeekDay = CSimpleCalendar::WeekDay(tmCheck);
 	const unsigned int CYCLE_TIME = WEEK_SECONDS;
 
 	//
@@ -94,15 +76,15 @@ CTimeSliceFormatWeekly::AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t&
 	time_t tmBase = tmWeekDay;
 	unsigned int uTimeMin = CYCLE_TIME;
 	unsigned int uTimeMax = 0;
+	unsigned int uEndTime = 0;
 
 	// check time slice min and slice max
 	for (auto& slice : _vSlice) {
-		if (slice._use_cycle_end) {
-			slice._end_time = slice._begin_time + CYCLE_TIME;
-		}
+		// valid format end time
+		uEndTime = CTimeSliceFormatBase::GetValidFormatEndTime(&slice, CYCLE_TIME);
 
 		uTimeMin = (slice._begin_time < uTimeMin) ? slice._begin_time : uTimeMin;
-		uTimeMax = (slice._end_time > uTimeMax) ? slice._end_time : uTimeMax;
+		uTimeMax = (uEndTime > uTimeMax) ? uEndTime : uTimeMax;
 	}
 
 	// adjust bound
@@ -116,46 +98,28 @@ CTimeSliceFormatWeekly::AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t&
 	}
 
 	//
-	if (IsBetweenPeriod(tmDaypoint, (uint64_t)(tmBase), uTimeMin, uTimeMax)) {
+	if (IsBetweenPeriod(tmCheck, tmBase, uTimeMin, uTimeMax)) {
 		outCycle._base = tmBase;
 		outCycle._timemin = uTimeMin;
 		outCycle._timemax = uTimeMax;
-		bSuccess = true;
+		return;
 	}
-	else {
-		// check pre
-		tmBase -= CYCLE_TIME;
-		if (IsBetweenPeriod(tmDaypoint, (uint64_t)(tmBase), uTimeMin, uTimeMax)) {
-			outCycle._base = tmBase;
-			outCycle._timemin = uTimeMin;
-			outCycle._timemax = uTimeMax;
-			bSuccess = true;
-		}
-	}
-	return bSuccess;
+
+	// use pre
+	tmBase -= CYCLE_TIME;
+	outCycle._base = tmBase;
+	outCycle._timemin = uTimeMin;
+	outCycle._timemax = uTimeMax;
 }
 
 //------------------------------------------------------------------------------
 /**
 
 */
-bool
-CTimeSliceFormatWeekly::AllocNextCycle(const time_slicer_cycle_t& cycle, time_slicer_cycle_t& outNextCycle) {
-	const unsigned int CYCLE_TIME = WEEK_SECONDS;
-	outNextCycle = cycle;
-	outNextCycle._base += CYCLE_TIME;
-	return true;
-}
-
-//------------------------------------------------------------------------------
-/**
-
-*/
-bool
-CTimeSliceFormatMonthly::AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t& outCycle) {
-	bool bSuccess = false;
+void
+CTimeSliceFormatMonthly::ResetCycle(const time_t tmCheck, time_slicer_cycle_t& outCycle) const {
 	time_t tmMonthDay, tmMonthDayPre, tmMonthDayPost;
-	CSimpleCalendar::MonthDay(tmDaypoint, tmMonthDay, tmMonthDayPre, tmMonthDayPost);
+	CSimpleCalendar::MonthDay(tmCheck, tmMonthDay, tmMonthDayPre, tmMonthDayPost);
 	const unsigned int CYCLE_TIME = tmMonthDayPost - tmMonthDay;
 
 	//
@@ -163,15 +127,15 @@ CTimeSliceFormatMonthly::AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t
 	time_t tmBase = tmMonthDay;
 	unsigned int uTimeMin = CYCLE_TIME;
 	unsigned int uTimeMax = 0;
+	unsigned int uEndTime = 0;
 
 	// check time slice min and slice max
 	for (auto& slice : _vSlice) {
-		if (slice._use_cycle_end) {
-			slice._end_time = slice._begin_time + CYCLE_TIME;
-		}
+		// valid format end time
+		uEndTime = CTimeSliceFormatBase::GetValidFormatEndTime(&slice, CYCLE_TIME);
 
 		uTimeMin = (slice._begin_time < uTimeMin) ? slice._begin_time : uTimeMin;
-		uTimeMax = (slice._end_time > uTimeMax) ? slice._end_time : uTimeMax;
+		uTimeMax = (uEndTime > uTimeMax) ? uEndTime : uTimeMax;
 	}
 
 	// adjust bound
@@ -185,34 +149,18 @@ CTimeSliceFormatMonthly::AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t
 	}
 
 	//
-	if (IsBetweenPeriod(tmDaypoint, (uint64_t)(tmBase), uTimeMin, uTimeMax)) {
+	if (IsBetweenPeriod(tmCheck, tmBase, uTimeMin, uTimeMax)) {
 		outCycle._base = tmBase;
 		outCycle._timemin = uTimeMin;
 		outCycle._timemax = uTimeMax;
-		bSuccess = true;
+		return;
 	}
-	else {
-		// check pre
-		tmBase = tmMonthDayPre;
-		if (IsBetweenPeriod(tmDaypoint, (uint64_t)(tmBase), uTimeMin, uTimeMax)) {
-			outCycle._base = tmBase;
-			outCycle._timemin = uTimeMin;
-			outCycle._timemax = uTimeMax;
-			bSuccess = true;
-		}
-	}
-	return bSuccess;
-}
 
-//------------------------------------------------------------------------------
-/**
-
-*/
-bool
-CTimeSliceFormatMonthly::AllocNextCycle(const time_slicer_cycle_t& cycle, time_slicer_cycle_t& outNextCycle) {
-	time_t tmDaypoint = cycle._base + cycle._timemax; // timemax is in next cycle
-
-	return AllocCycle(tmDaypoint, outNextCycle);
+	// use pre
+	tmBase = tmMonthDayPre;
+	outCycle._base = tmBase;
+	outCycle._timemin = uTimeMin;
+	outCycle._timemax = uTimeMax;
 }
 
 /* -- EOF -- */
