@@ -13,11 +13,16 @@
 */
 class CTimeSliceFormatDaily : public CTimeSliceFormatBase {
 public:
-	CTimeSliceFormatDaily(CSimpleCalendar *pCalendar) : CTimeSliceFormatBase(pCalendar) { }
+	CTimeSliceFormatDaily() : CTimeSliceFormatBase() { }
 	virtual ~CTimeSliceFormatDaily() { };
 
-	virtual bool				AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t& outCycle);
-	virtual bool				AllocNextCycle(const time_slicer_cycle_t& cycle, time_slicer_cycle_t& outCycle);
+	virtual void				ResetCycle(const time_t tmCheck, time_slicer_cycle_t& outCycle) const override;
+
+	virtual void				RollCycleBase(time_slicer_cycle_t& inOutCycle) const override {
+		const unsigned int CYCLE_TIME = DAY_SECONDS;
+		inOutCycle._base += CYCLE_TIME;
+	}
+
 };
 
 //------------------------------------------------------------------------------
@@ -26,11 +31,16 @@ public:
 */
 class CTimeSliceFormatWeekly : public CTimeSliceFormatBase {
 public:
-	CTimeSliceFormatWeekly(CSimpleCalendar *pCalendar) : CTimeSliceFormatBase(pCalendar) { }
+	CTimeSliceFormatWeekly() : CTimeSliceFormatBase() { }
 	virtual ~CTimeSliceFormatWeekly() { };
 
-	virtual bool				AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t& outCycle);
-	virtual bool				AllocNextCycle(const time_slicer_cycle_t& cycle, time_slicer_cycle_t& outCycle);
+	virtual void				ResetCycle(const time_t tmCheck, time_slicer_cycle_t& outCycle) const override;
+
+	virtual void				RollCycleBase(time_slicer_cycle_t& inOutCycle) const override {
+		const unsigned int CYCLE_TIME = WEEK_SECONDS;
+		inOutCycle._base += CYCLE_TIME;
+	}
+
 };
 
 //------------------------------------------------------------------------------
@@ -39,15 +49,16 @@ public:
 */
 class CTimeSliceFormatMonthly : public CTimeSliceFormatBase {
 public:
-	CTimeSliceFormatMonthly(CSimpleCalendar *pCalendar) : CTimeSliceFormatBase(pCalendar) { }
+	CTimeSliceFormatMonthly() : CTimeSliceFormatBase() { }
 	virtual ~CTimeSliceFormatMonthly() { };
 
-	virtual unsigned int		GetCycleTimeInSeconds() {
-		return 7 * DAY_SECONDS;
+	virtual void				ResetCycle(const time_t tmCheck, time_slicer_cycle_t& outCycle) const override;
+
+	virtual void				RollCycleBase(time_slicer_cycle_t& inOutCycle) const override {
+		time_t tmCheck = inOutCycle._base + inOutCycle._timemax; // timemax is in next cycle
+		ResetCycle(tmCheck, inOutCycle);
 	}
 
-	virtual bool				AllocCycle(const time_t tmDaypoint, time_slicer_cycle_t& outCycle);
-	virtual bool				AllocNextCycle(const time_slicer_cycle_t& cycle, time_slicer_cycle_t& outCycle);
 };
 
 //------------------------------------------------------------------------------
@@ -56,7 +67,7 @@ public:
 */
 class CTimeSlicerDaily : public CTimeSlicerBase {
 public:
-	CTimeSlicerDaily(const char *sName, CTimeoutEventHub *pHub, IHeartbeat *pHeartbeat, CTimeSliceFormatDaily *pFormat)
+	CTimeSlicerDaily(const char *sName, CTimeoutEventHub *pHub, IHeartbeat *pHeartbeat, const CTimeSliceFormatDaily *pFormat)
 		: CTimeSlicerBase(sName, pHub, pHeartbeat, pFormat) { }
 	virtual ~CTimeSlicerDaily() { }
 };
@@ -67,7 +78,7 @@ public:
 */
 class CTimeSlicerWeekly : public CTimeSlicerBase {
 public:
-	CTimeSlicerWeekly(const char *sName, CTimeoutEventHub *pHub, IHeartbeat *pHeartbeat, CTimeSliceFormatWeekly *pFormat)
+	CTimeSlicerWeekly(const char *sName, CTimeoutEventHub *pHub, IHeartbeat *pHeartbeat, const CTimeSliceFormatWeekly *pFormat)
 		: CTimeSlicerBase(sName, pHub, pHeartbeat, pFormat) { }
 	virtual ~CTimeSlicerWeekly() { }
 
@@ -79,7 +90,7 @@ public:
 */
 class CTimeSlicerMonthly : public CTimeSlicerBase {
 public:
-	CTimeSlicerMonthly(const char *sName, CTimeoutEventHub *pHub, IHeartbeat *pHeartbeat, CTimeSliceFormatMonthly *pFormat)
+	CTimeSlicerMonthly(const char *sName, CTimeoutEventHub *pHub, IHeartbeat *pHeartbeat, const CTimeSliceFormatMonthly *pFormat)
 		: CTimeSlicerBase(sName, pHub, pHeartbeat, pFormat) { }
 	virtual ~CTimeSlicerMonthly() { }
 

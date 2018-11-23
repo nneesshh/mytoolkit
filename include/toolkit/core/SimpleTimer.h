@@ -45,6 +45,10 @@ public:
 		return (uint64_t)std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 	}
 
+	static time_t				GetNowSystemTime() {
+		return (time_t)std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+	}
+
 	static int64_t				GetElapsedInMs() {
 		base::TimeDelta time_elapsed =
 			base::TimeTicks::Now() - base::TimeTicks();
