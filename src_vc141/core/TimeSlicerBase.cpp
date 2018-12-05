@@ -75,8 +75,9 @@ public:
 	}
 
 	void Reset(time_t tmCheck) {
-		// 
-		_uSlicePointer = _host._refFormat->FindSlicePointerByTime(tmCheck, _cycle);
+		//
+		bool bAwake, bFollow;
+		_uSlicePointer = _host._refFormat->FindSlicePointerByTime(tmCheck, _cycle, bAwake, bFollow);
 	}
 
 	void FireBeginEvent() {
@@ -87,7 +88,7 @@ public:
 			const time_slice_t *slice = _host._refFormat->GetSliceAt(_uSlicePointer);
 			if (slice) {
 
-				uint64_t uExpireAbsTimeInMs = (uint64_t)1000 * _host.GetSliceBeginTime(slice);
+				uint64_t uExpireAbsTimeInMs = (uint64_t)1000 * _host.GetSliceBeginTime(slice, &_cycle);
 				_hub.InitExpireTimeout(&_to);
 				_hub.AddTimeoutAbs(&_to, uExpireAbsTimeInMs);
 
@@ -115,7 +116,7 @@ public:
 			const time_slice_t *slice = _host._refFormat->GetSliceAt(_uSlicePointer);
 			if (slice) {
 
-				uint64_t uExpireAbsTimeInMs = (uint64_t)1000 * _host.GetSliceEndTime(slice);
+				uint64_t uExpireAbsTimeInMs = (uint64_t)1000 * _host.GetSliceEndTime(slice, &_cycle);
 				_hub.InitExpireTimeout(&_to);
 				_hub.AddTimeoutAbs(&_to, uExpireAbsTimeInMs);
 
@@ -263,14 +264,18 @@ CTimeSliceFormatBase::AdjustSliceEndTime() {
 
 */
 const time_slice_t *
-CTimeSliceFormatBase::GetSliceByTime(time_t tmCheck) const {
+CTimeSliceFormatBase::AllocateSlice(time_t tmCheck, time_slicer_cycle_t& outCycle, bool& outAwake, bool& outFollow) const {
 	//
 	time_slicer_cycle_t cycle;
-	unsigned int uSlicePointer = FindSlicePointerByTime(tmCheck, cycle);
+	bool bAwake, bFollow;
+	unsigned int uSlicePointer = FindSlicePointerByTime(tmCheck, cycle, outAwake, outFollow);
 	if (1 <= uSlicePointer
 		&& uSlicePointer <= _vSlice.size()) {
 		return GetSliceAt(uSlicePointer);
 	}
+
+	bAwake = false;
+	bFollow = false;
 	return nullptr;
 }
 
@@ -278,42 +283,8 @@ CTimeSliceFormatBase::GetSliceByTime(time_t tmCheck) const {
 /**
 
 */
-time_t
-CTimeSliceFormatBase::GetSliceBeginTime(const time_slice_t *slice, time_t tmCheck) const {
-	//
-	time_slicer_cycle_t cycle;
-	unsigned int uSlicePointer = FindSlicePointerByTime(tmCheck, cycle);
-	if (1 <= uSlicePointer
-		&& uSlicePointer <= _vSlice.size()) {
-		return (time_t)(cycle._base + slice->_begin_time);
-	}
-	return 0;
-}
-
-//------------------------------------------------------------------------------
-/**
-
-*/
-time_t
-CTimeSliceFormatBase::GetSliceEndTime(const time_slice_t *slice, time_t tmCheck) const {
-	//
-	time_slicer_cycle_t cycle;
-	unsigned int uSlicePointer = FindSlicePointerByTime(tmCheck, cycle);
-	if (1 <= uSlicePointer
-		&& uSlicePointer <= _vSlice.size()) {
-		// valid format end time
-		unsigned int uEndTime = CTimeSliceFormatBase::GetValidFormatEndTime(slice, cycle._timemax);
-		return (time_t)(cycle._base + uEndTime);
-	}
-	return 0;
-}
-
-//------------------------------------------------------------------------------
-/**
-
-*/
 unsigned int
-CTimeSliceFormatBase::FindSlicePointerByTime(const time_t tmCheck, time_slicer_cycle_t& outCycle) const {
+CTimeSliceFormatBase::FindSlicePointerByTime(const time_t tmCheck, time_slicer_cycle_t& outCycle, bool& outAwake, bool& outFollow) const {
 	// 0 means disable
 	unsigned int uSlicePointer = 0;
 
@@ -321,8 +292,8 @@ CTimeSliceFormatBase::FindSlicePointerByTime(const time_t tmCheck, time_slicer_c
 	ResetCycle(tmCheck, outCycle);
 
 	//
-	bool bWake = false;
-	bool bFollow = false;
+	outAwake = false;
+	outFollow = false;
 
 	// walk
 	const time_slice_t *slice;
@@ -342,26 +313,26 @@ CTimeSliceFormatBase::FindSlicePointerByTime(const time_t tmCheck, time_slicer_c
 			// check wake
 			if (IsBetweenPeriod(tmCheck, outCycle._base, slice->_begin_time, uEndTime)) {
 				uSlicePointer = slice->_id;
-				bWake = true;
+				outAwake = true;
 				break;
 			}
 			else {
 				// check follow
 				if (CTimeSliceFormatBase::IsBetweenPeriod(tmCheck, outCycle._base, 0, slice->_begin_time)) {
 					uSlicePointer = slice->_id;
-					bFollow = true;
+					outFollow = true;
 					break;
 				}
 			}
 
 			if (bTail
-				&& !bWake
-				&& !bFollow) {
+				&& !outAwake
+				&& !outFollow) {
 				// follow must be next cycle's first item
 				RollCycleBase(outCycle);
 
 				uSlicePointer = 1;
-				bFollow = true;
+				outFollow = true;
 				break;
 			}
 		}
@@ -443,21 +414,28 @@ CTimeSlicerBase::StopTick() {
 
 */
 const time_slice_t *
-CTimeSlicerBase::GetSliceByTime(time_t tmCheck) const {
+CTimeSlicerBase::GetSliceByTime(time_t tmCheck, time_slicer_cycle_t& outCycle) const {
 
 	if (IsTicking()) {
 		if (1 <= _timer->_uSlicePointer
 			&& _timer->_uSlicePointer <= _refFormat->_vSlice.size()) {
 
 			const time_slice_t *slice = _refFormat->GetSliceAt(_timer->_uSlicePointer);
-			if (IsTimeInSlicePeriod(tmCheck, slice))
+			if (IsTimeInSlicePeriod(tmCheck, slice, &_timer->_cycle)) {
+				outCycle = _timer->_cycle;
 				return slice;
+			}
 		}
 		return nullptr;
 	}
 
 	//
-	return _refFormat->GetSliceByTime(tmCheck);
+	bool bAwake, bFollow;
+	const time_slice_t *slice = _refFormat->AllocateSlice(tmCheck, outCycle, bAwake, bFollow);
+	if (bAwake) {
+		return slice;
+	}
+	return nullptr;
 }
 
 //------------------------------------------------------------------------------
@@ -465,15 +443,26 @@ CTimeSlicerBase::GetSliceByTime(time_t tmCheck) const {
 
 */
 time_t
-CTimeSlicerBase::GetSliceBeginTime(const time_slice_t *slice) const {
+CTimeSlicerBase::GetSliceBeginTime(const time_slice_t *slice, time_t tmClue) const {
 
 	if (IsTicking()) {
-		return (time_t)(_timer->_cycle._base + slice->_begin_time);
+		return GetSliceBeginTime(slice, &_timer->_cycle);
 	}
 
 	//
-	time_t tmNow = _refHeartbeat->GetTimer().GetNowSystemTime();
-	return _refFormat->GetSliceBeginTime(slice, tmNow);
+	if (tmClue > 0) {
+		// find slice cycle
+		time_slicer_cycle_t cycle;
+		bool bAwake, bFollow;
+		unsigned int uSlicePointer = _refFormat->FindSlicePointerByTime(tmClue, cycle, bAwake, bFollow);
+
+		// ignore awake-follow value, we just use cycle
+		if (uSlicePointer > 0) {
+			return GetSliceBeginTime(slice, &cycle);
+		}
+	}
+
+	return 0;
 }
 
 //------------------------------------------------------------------------------
@@ -481,17 +470,52 @@ CTimeSlicerBase::GetSliceBeginTime(const time_slice_t *slice) const {
 
 */
 time_t
-CTimeSlicerBase::GetSliceEndTime(const time_slice_t *slice) const {
+CTimeSlicerBase::GetSliceEndTime(const time_slice_t *slice, time_t tmClue) const {
 
 	if (IsTicking()) {
-		// valid format end time
-		unsigned int uEndTime = CTimeSliceFormatBase::GetValidFormatEndTime(slice, _timer->_cycle._timemax);
-		return (time_t)(_timer->_cycle._base + uEndTime);
+		return GetSliceEndTime(slice, &_timer->_cycle);
 	}
 
 	//
-	time_t tmNow = _refHeartbeat->GetTimer().GetNowSystemTime();
-	return _refFormat->GetSliceEndTime(slice, tmNow);
+	if (tmClue > 0) {
+		// find slice cycle
+		time_slicer_cycle_t cycle;
+		bool bAwake, bFollow;
+		unsigned int uSlicePointer = _refFormat->FindSlicePointerByTime(tmClue, cycle, bAwake, bFollow);
+
+		// ignore awake-follow value, we just use cycle
+		if (uSlicePointer > 0) {
+			return GetSliceEndTime(slice, &cycle);
+		}
+	}
+
+	return 0;
+}
+
+//------------------------------------------------------------------------------
+/**
+
+*/
+bool
+CTimeSlicerBase::IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice, time_t tmClue) const {
+
+	if (IsTicking()) {
+		return IsTimeInSlicePeriod(tmCheck, slice, &_timer->_cycle);
+	}
+
+	//
+	if (tmClue > 0) {
+		// find slice cycle
+		time_slicer_cycle_t cycle;
+		bool bAwake, bFollow;
+		unsigned int uSlicePointer = _refFormat->FindSlicePointerByTime(tmClue, cycle, bAwake, bFollow);
+
+		// ignore awake-follow value, we just use cycle
+		if (uSlicePointer > 0) {
+			return IsTimeInSlicePeriod(tmCheck, slice, &cycle);
+		}
+	}
+	return false;
 }
 
 /* -- EOF -- */

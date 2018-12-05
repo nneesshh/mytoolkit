@@ -31,6 +31,8 @@ public:
 	virtual time_slice_t *		AddFormat(const char *sBeginTime, const char *sEndTime) override;
 	virtual void				AdjustSliceEndTime() override;
 
+	virtual const time_slice_t *	AllocateSlice(time_t tmCheck, time_slicer_cycle_t& outCycle, bool& outAwake, bool& outFollow) const override;
+
 	virtual int					GetSliceSize() const override {
 		return (int)_vSlice.size();
 	}
@@ -42,18 +44,8 @@ public:
 		return nullptr;
 	}
 
-	virtual const time_slice_t *	GetSliceByTime(time_t tmCheck) const override;
-
-	virtual time_t				GetSliceBeginTime(const time_slice_t *slice, time_t tmCheck) const override;
-	virtual time_t				GetSliceEndTime(const time_slice_t *slice, time_t tmCheck) const override;
-
-	virtual unsigned int		FindSlicePointerByTime(const time_t tmCheck, time_slicer_cycle_t& outCycle) const override;
+	virtual unsigned int		FindSlicePointerByTime(const time_t tmCheck, time_slicer_cycle_t& outCycle, bool& outAwake, bool& outFollow) const override;
 	virtual unsigned int		NextSlicePointer(const unsigned int uSlicePointer, time_slicer_cycle_t& inOutCycle) const override;
-
-	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice, time_t tmNow) const override {
-		return GetSliceBeginTime(slice, tmNow) <= tmCheck
-			&& tmCheck < GetSliceEndTime(slice, tmNow);
-	}
 
 public:
 	static unsigned int			GetValidFormatEndTime(const time_slice_t *slice, const unsigned int TIME_MAX) {
@@ -88,17 +80,31 @@ public:
 
 	virtual const time_slice_t *	GetNowSlice() const override {
 		time_t tmNow = _refHeartbeat->GetTimer().GetNowSystemTime();
-		return GetSliceByTime(tmNow);
+		time_slicer_cycle_t cycle;
+		return GetSliceByTime(tmNow, cycle);
 	}
 
-	virtual const time_slice_t *	GetSliceByTime(time_t tmCheck) const override;
+	virtual const time_slice_t *	GetSliceByTime(time_t tmCheck, time_slicer_cycle_t& outCycle) const override;
 
-	virtual time_t				GetSliceBeginTime(const time_slice_t *slice) const override;
-	virtual time_t				GetSliceEndTime(const time_slice_t *slice) const override;
+	virtual time_t				GetSliceBeginTime(const time_slice_t *slice, time_t tmClue) const override;
 
-	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice) const override {
-		return GetSliceBeginTime(slice) <= tmCheck
-			&& tmCheck < GetSliceEndTime(slice);
+	virtual time_t				GetSliceBeginTime(const time_slice_t *slice, const time_slicer_cycle_t *cycle) const override {
+		return (time_t)(cycle->_base + slice->_begin_time);
+	}
+
+	virtual time_t				GetSliceEndTime(const time_slice_t *slice, time_t tmClue) const override;
+
+	virtual time_t				GetSliceEndTime(const time_slice_t *slice, const time_slicer_cycle_t *cycle) const override {
+		// valid format end time
+		unsigned int uEndTime = CTimeSliceFormatBase::GetValidFormatEndTime(slice, cycle->_timemax);
+		return (time_t)(cycle->_base + uEndTime);
+	}
+
+	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice, time_t tmClue) const override;
+
+	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice, const time_slicer_cycle_t *cycle) const override {
+		return GetSliceBeginTime(slice, cycle) <= tmCheck
+			&& tmCheck < GetSliceEndTime(slice, cycle);
 	}
 
 public:

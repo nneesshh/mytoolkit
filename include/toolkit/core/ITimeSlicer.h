@@ -43,18 +43,14 @@ public:
 	virtual time_slice_t *		AddFormat(const char *sBeginTime, const char *sEndTime) = 0;
 	virtual void				AdjustSliceEndTime() = 0;
 
+	virtual const time_slice_t *	AllocateSlice(time_t tmCheck, time_slicer_cycle_t& outCycle, bool& outAwake, bool& outFollow) const = 0;
+
 	virtual int					GetSliceSize() const = 0;
 
 	virtual const time_slice_t *	GetSliceAt(unsigned int uSlicePointer) const = 0;
-	virtual const time_slice_t *	GetSliceByTime(time_t tmCheck) const = 0;
 
-	virtual time_t				GetSliceBeginTime(const time_slice_t *slice, time_t tmCheck) const = 0;
-	virtual time_t				GetSliceEndTime(const time_slice_t *slice, time_t tmCheck) const = 0;
-
-	virtual unsigned int		FindSlicePointerByTime(const time_t tmCheck, time_slicer_cycle_t& outCycle) const = 0;
+	virtual unsigned int		FindSlicePointerByTime(const time_t tmCheck, time_slicer_cycle_t& outCycle, bool& outAwake, bool& outFollow) const = 0;
 	virtual unsigned int		NextSlicePointer(const unsigned int uSlicePointer, time_slicer_cycle_t& inOutCycle) const = 0;
-
-	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice, time_t tmNow) const = 0;
 
 	/* cycle */
 	virtual void				ResetCycle(const time_t tmCheck, time_slicer_cycle_t& outCycle) const = 0;
@@ -77,12 +73,16 @@ public:
 	virtual const ITimeSliceFormat *	GetSliceFormat() const = 0;
 
 	virtual const time_slice_t *	GetNowSlice() const = 0;
-	virtual const time_slice_t *	GetSliceByTime(time_t tmCheck) const = 0;
+	virtual const time_slice_t *	GetSliceByTime(time_t tmCheck, time_slicer_cycle_t& outCycle) const = 0;
 
-	virtual time_t				GetSliceBeginTime(const time_slice_t *slice) const = 0;
-	virtual time_t				GetSliceEndTime(const time_slice_t *slice) const = 0;
+	virtual time_t				GetSliceBeginTime(const time_slice_t *slice, time_t tmClue) const = 0;
+	virtual time_t				GetSliceBeginTime(const time_slice_t *slice, const time_slicer_cycle_t *cycle) const = 0;
 
-	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice) const = 0;
+	virtual time_t				GetSliceEndTime(const time_slice_t *slice, time_t tmClue) const = 0;
+	virtual time_t				GetSliceEndTime(const time_slice_t *slice, const time_slicer_cycle_t *cycle) const = 0;
+
+	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice, time_t tmClue) const = 0;
+	virtual bool				IsTimeInSlicePeriod(time_t tmCheck, const time_slice_t *slice, const time_slicer_cycle_t *cycle) const = 0;
 
 };
 
