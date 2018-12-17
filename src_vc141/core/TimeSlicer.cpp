@@ -37,15 +37,9 @@ CTimeSliceFormatDaily::ResetCycle(const time_t tmCheck, time_slicer_cycle_t& out
 		uTimeMax = (uEndTime > uTimeMax) ? uEndTime : uTimeMax;
 	}
 
-	// adjust bound
-	if (uTimeMax > CYCLE_TIME) {
-		uTimeMin = std::min<unsigned int>(uTimeMin, uTimeMax - CYCLE_TIME);
-		uTimeMax = std::min<unsigned int>(uTimeMax, uTimeMin + CYCLE_TIME);
-	}
-	else {
-		uTimeMin = 0;
-		uTimeMax = CYCLE_TIME;
-	}
+	// adjust bound -- uTimeMax should be greater than CYCLE_TIME at least
+	uTimeMin = std::min<unsigned int>(uTimeMin, CYCLE_TIME);
+	uTimeMax = std::max<unsigned int>(uTimeMax, uTimeMin + CYCLE_TIME);
 	
 	//
 	if (IsBetweenPeriod(tmCheck, tmBase, uTimeMin, uTimeMax)) {
@@ -87,15 +81,9 @@ CTimeSliceFormatWeekly::ResetCycle(const time_t tmCheck, time_slicer_cycle_t& ou
 		uTimeMax = (uEndTime > uTimeMax) ? uEndTime : uTimeMax;
 	}
 
-	// adjust bound
-	if (uTimeMax > CYCLE_TIME) {
-		uTimeMin = std::min<unsigned int>(uTimeMin, uTimeMax - CYCLE_TIME);
-		uTimeMax = std::min<unsigned int>(uTimeMax, uTimeMin + CYCLE_TIME);
-	}
-	else {
-		uTimeMin = 0;
-		uTimeMax = CYCLE_TIME;
-	}
+	// adjust bound -- uTimeMax should be greater than CYCLE_TIME at least
+	uTimeMin = std::min<unsigned int>(uTimeMin, CYCLE_TIME);
+	uTimeMax = std::max<unsigned int>(uTimeMax, uTimeMin + CYCLE_TIME);
 
 	//
 	if (IsBetweenPeriod(tmCheck, tmBase, uTimeMin, uTimeMax)) {
@@ -138,15 +126,9 @@ CTimeSliceFormatMonthly::ResetCycle(const time_t tmCheck, time_slicer_cycle_t& o
 		uTimeMax = (uEndTime > uTimeMax) ? uEndTime : uTimeMax;
 	}
 
-	// adjust bound
-	if (uTimeMax > CYCLE_TIME) {
-		uTimeMin = std::min<unsigned int>(uTimeMin, uTimeMax - CYCLE_TIME);
-		uTimeMax = std::min<unsigned int>(uTimeMax, uTimeMin + CYCLE_TIME);
-	}
-	else {
-		uTimeMin = 0;
-		uTimeMax = CYCLE_TIME;
-	}
+	// adjust bound -- uTimeMax should be greater than CYCLE_TIME at least
+	uTimeMin = std::min<unsigned int>(uTimeMin, CYCLE_TIME);
+	uTimeMax = std::max<unsigned int>(uTimeMax, uTimeMin + CYCLE_TIME);
 
 	//
 	if (IsBetweenPeriod(tmCheck, tmBase, uTimeMin, uTimeMax)) {
